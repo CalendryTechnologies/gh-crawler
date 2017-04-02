@@ -103,5 +103,5 @@ if __name__ == "__main__":
         pg_num += 1
 
     json_text = json.dumps(event_list, indent=4)
-    with open("hartsvillesc-test.json", "w+") as fp:
+    with open("hartsvillesc.json", "w+") as fp:
         fp.write(json_text)
