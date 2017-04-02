@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 from dotenv import load_dotenv, find_dotenv
 from sqlalchemy import Table, Column, String, create_engine, MetaData
 
