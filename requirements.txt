@@ -1,0 +1,10 @@
+appdirs==1.4.3
+click==6.7
+lxml==3.7.3
+packaging==16.8
+psycopg2==2.7.1
+pyparsing==2.2.0
+python-dotenv==0.6.4
+requests==2.13.0
+six==1.10.0
+SQLAlchemy==1.1.8
