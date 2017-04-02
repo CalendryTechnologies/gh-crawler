@@ -24,6 +24,9 @@ def startstop(startstr, stopstr):
     try:
         start = dateutil.parse(startstr, fuzzy=True)
         try:
+            '''
+            This can be done by converting ht edate to long which is the default way it is stored and compare the long times so that the next date will always be later.
+            '''
             stop = dateutil.parse(stopstr, fuzzy=True)
             #TODO make sure each attribute is larger in order from year down (to prevent things like January 1, 2018 < December 31, 2017)
 
@@ -40,8 +43,7 @@ if __name__ == "__main__":
     datetime_fmt = "%m/%d/%Y %H:%M:%S" #format datetime should be in for standardization
     event_list = [] #list of events to be put together (each event will be dictionary)
 
-    #TODO TODO TODO do not restrict pages in real deal
-    while not done: # and pg_num <= 3:
+    while not done:
         #Loop through all pages of the calendar
 
         page = requests.get('https://www.hartsvillesc.gov/calendar/?action=tribe_photo&tribe_paged=%d&tribe_event_display=photo' % pg_num)
