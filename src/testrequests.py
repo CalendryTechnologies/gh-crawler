@@ -43,14 +43,15 @@ if __name__ == "__main__":
     datetime_fmt = "%m/%d/%Y %H:%M:%S" #format datetime should be in for standardization
     event_list = [] #list of events to be put together (each event will be dictionary)
 
-    while not done:
+    #TODO TODO TODO remove this debugging part
+    while not done and pg_num < 3:
         #Loop through all pages of the calendar
 
         page = requests.get('https://www.hartsvillesc.gov/calendar/?action=tribe_photo&tribe_paged=%d&tribe_event_display=photo' % pg_num)
         tree = html.fromstring(page.content)
 
-        events = tree.xpath('//div[contains(@class,"type-tribe_events")]')
-        notices = tree.xpath('//div[contains(@class,"tribe-events-notices")]/ul/li/text()')
+        events = tree.xpath("//div[contains(@class,'type-tribe_events')]")
+        notices = tree.xpath("//div[contains(@class,'tribe-events-notices')]/ul/li/text()")
 
         done = False
         for notice in notices:
@@ -61,11 +62,11 @@ if __name__ == "__main__":
             done = True
         else:
             for event in events:
-                titles = event.xpath('.//h2[contains(@class,"tribe-events-list-event-title")]/a/text()')
-                starts = event.xpath('.//span[contains(@class,"tribe-event-date-start")]/text()')
-                stops = event.xpath('.//span[contains(@class,"tribe-event-time")]/text()')
-                descriptions = event.xpath('.//div[contains(@class,"tribe-events-content")]/p/text()')
-                links = event.xpath('.//a[contains(@class,"tribe-event-url")]/@href')
+                titles = event.xpath(".//h2[contains(@class,'tribe-events-list-event-title')]/a/text()")
+                starts = event.xpath(".//span[contains(@class,'tribe-event-date-start')]/text()")
+                stops = event.xpath(".//span[contains(@class,'tribe-event-time')]/text()")
+                descriptions = event.xpath(".//div[contains(@class,'tribe-events-content')]/p/text()")
+                links = event.xpath(".//a[contains(@class,'tribe-event-url')]/@href")
                 #TODO use link to get more information and possibly use lxml function to replace relative urls to help following
 
                 new_event = {}
@@ -105,5 +106,5 @@ if __name__ == "__main__":
         pg_num += 1
 
     json_text = json.dumps(event_list, indent=4)
-    with open("hartsvillesc.json", "w+") as fp:
+    with open("results/hartsvillesc.json", "w+") as fp:
         fp.write(json_text)
