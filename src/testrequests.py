@@ -42,7 +42,6 @@ def inner_extract(doc_root, node_root, node_details, output_file=None, variables
     :return: Returns a json-like python object if no output file is specified else None
     '''
 
-
     pass #TODO read xpaths from dictionary and get data
 
 if __name__ == "__main__":
@@ -53,7 +52,7 @@ if __name__ == "__main__":
     event_list = [] #list of events to be put together (each event will be dictionary)
 
     #TODO TODO TODO remove this debugging part
-    while not done and pg_num < 3:
+    while not done: # and pg_num < 3:
         #Loop through all pages of the calendar
 
         page = requests.get('https://www.hartsvillesc.gov/calendar/?action=tribe_photo&tribe_paged=%d&tribe_event_display=photo' % pg_num)
@@ -102,7 +101,6 @@ if __name__ == "__main__":
 
                         output_datetime = datetime.strftime(try_datetime, '%m/%d/%Y %H:%M:%S')
 
-                        print(output_datetime)
                         new_event["stop"] = output_datetime
                     except: #TODO don't just exept everything
                         print("Unable to parse stop string '%s'" % stopstr)
@@ -119,5 +117,5 @@ if __name__ == "__main__":
         pg_num += 1
 
     json_text = json.dumps(event_list, indent=4)
-    with open("results/hartsvillesc.json", "w+") as fp:
+    with open("results/hartsvillesc-test.json", "w+") as fp:
         fp.write(json_text)
