@@ -23,7 +23,7 @@
         "startstr" : ".//span[contains(@class,'tribe-event-date-start')]/text()",
         "stopstr" : ".//span[contains(@class,'tribe-event-time')]/text()",
         "description" : ".//div[contains(@class,'tribe-events-content')]/p/text()",
-        "link" : ".//a[contains(@class,'tribe-event-url')]/@href",
+        "link" : ".//a[contains(@class,'tribe-event-url')]/@href"
 
 
       },
@@ -31,6 +31,6 @@
       "#" : "Order of element recognition: vars -> other strings (looping with vars) -> nodes (inside loop)"
   },
 
-  "#" : "Output file for json data collected",
-  "@output_dir" : "results"
+  "#" : "Output file for json data collected (relative to results directory)",
+  "@output_dir" : "template-test"
 }
