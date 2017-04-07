@@ -28,29 +28,11 @@ def project_root():
     '''
     return pathjoin(dirname(abspath(sys.argv[0])), "..") #gets root of
 
-def partition(pred, dictionary):
-    '''
-    Use a predicate to partition dictionary entries into false entries and true entries
-
-    :param pred: Predicate lambda applied on a tuple (key,value) which will return True or False
-    :param iterable: Dictionary to partition
-
-    Stolen itertools-recipe
-    '''
-    # partition(is_odd, range(10)) --> 0 2 4 6 8   and  1 3 5 7 9
-    t1, t2 = itertools.tee(dictionary.items())
-    first = dict(itertools.filterfalse(pred, t1))
-    print(first)
-    second = dict(filter(pred, t2))
-    print(second)
-    return first, second
-
 def extract_from_template(json_filename):
     '''
     Reads json template file then extracts data according to its rules and writes it where specified
     '''
     template = get_template(pathjoin(project_root(), "templates", json_filename)) #filename in templates directory
-    print("Yes")
     extract(template)
 
 def get_template(json_filename):
@@ -67,9 +49,10 @@ def partition_rules(rules_dict):
     :param rules_dict: Dictionary with keys starting with @ (annotations) and letters (processes)
     :return: Returns lists of (annotations, processes)
     '''
-    others = dict(filter(lambda key: len(key[0]) > 0, rules_dict.items())) #gets everything that has a length
-    others, annotations = partition(lambda key: key[0] != '@', others) #gets all keys beginning with @
-    others, processes = partition(lambda key: key[0] in string.ascii_letters, others) #get all keys beginning with a letter
+    others = {k:v for k,v in rules_dict.items() if len(k) > 0}
+    annotations = {k:v for k,v in others.items() if len(k) > 0 and k[0] == "@"}
+    processes = {k:v for k,v in others.items() if len(k) > 0 and k[0] in string.ascii_letters}
+
     return annotations, processes
 
 def extract(rules_dict):
@@ -79,9 +62,6 @@ def extract(rules_dict):
     annotations, processes = partition_rules(rules_dict)
 
     output_dir = pathjoin(project_root(), (annotations.get("@output_dir") or ".")) #get output_dir or use blank relative path #TODO possibly need to use . for relative location
-
-    print(annotations)
-    print(processes)
 
     for process_key in processes:
         #loop through each process and complete it
@@ -102,20 +82,44 @@ def get_variables(annotations):
 
     for annotation in annotations.items():
         if annotation[0].startswith("@var:"):
-            variables[annotation[0].replace("@var:")] = annotation[1]
+            variables[annotation[0].replace("@var:", "")] = annotation[1]
         if annotation[0].startswith("@list:"):
-            lists[annotations[0].replace("@list:")] = annotation[1]
+            lists[annotation[0].replace("@list:", "")] = annotation[1]
+
     return variables, lists
 
 def extract_process(rules_dict, output_file, variables={}):
     annotations, misc = partition_rules(rules_dict) #get annotations and misc (there shouldn't be anything without annotation)
 
-    variables, lists = get_variables(annotations)
+    new_variables, new_lists = get_variables(annotations)
+    variables.update(new_variables) #add variables to the dictionary
+    variables.update({k:v[0] for k,v in new_lists.items() if len(v) > 0}) #put first value of each list in dictionary
 
-    print(variables)
-    print(lists)
+    url = annotations.get("@url")
+    if url == None: return False #url is required for process
 
-    pass
+    done = False
+    while not done:
+        for var in variables.items():
+            url = url.replace("{$%s}" % var[0], str(var[1])) #replace any instance of variables in url
+            extract_nodes_from_url(url, rules_dict, output_file)
+
+        done = True #TODO add done condition of all variables exhausted or there are no variables
+
+    return True
+
+def extract_nodes_from_url(url, rules_dict, output_file, variables={}):
+    '''
+    Extracts a complete node from a document via ruled dictionary from url (allows use of threading)
+
+    :param url: String url to pull from
+    :rules_dict: dictionary with node rules
+    :param output_file: filename to write to (absolute)
+    :param variables: dictionary of variables to use
+    :return: Returns success rate boolean
+    '''
+    print(url) #TODO remove
+    pass #TODO
 
 def extract_nodes(doc_root, rules_dict, output_file, variables={}):
     '''
@@ -123,6 +127,9 @@ def extract_nodes(doc_root, rules_dict, output_file, variables={}):
 
     :param doc_root: document root element (created by lxml.html.fromstring())
     :rules_dict: dictionary with node rules
+    :param output_file: filename to write to (absolute)
+    :param variables: dictionary of variables to use
+    :return: Returns success rate boolean
     '''
     pass
 
