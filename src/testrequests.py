@@ -15,26 +15,35 @@ from datetime import datetime
 import dateutil.parser as dateutil #TODO actually use this
 
 
-def startstop(startstr, stopstr):
+def extract(rules_dict):
     '''
-    Extracts start and stop datetimes from strings
-    :param startstr: String denoting start datetime
-    :param stopstr: String denoting stop datetime (some information may be assumed from startstr)
+    Extracts an entire set of data based on a
     '''
-    try:
-        start = dateutil.parse(startstr, fuzzy=True)
-        try:
-            '''
-            This can be done by converting ht edate to long which is the default way it is stored and compare the long times so that the next date will always be later.
-            '''
-            stop = dateutil.parse(stopstr, fuzzy=True)
-            #TODO make sure each attribute is larger in order from year down (to prevent things like January 1, 2018 < December 31, 2017)
+    pass #TODO
 
-            return startstr, stopstr
-        except ValueError:
-            print('Unable to parse stop string "%s"' % stopstr)
-    except ValueError:
-        print('Unable to parse start string "%s"' % startstr)
+def extract_nodes(doc_root, rules_dict, variables={}):
+    '''
+    Extracts a complete node from a site
+
+    :param doc_root: document root element (created by lxml.html.fromstring())
+    :rules_dict: dictionary with node rules
+    '''
+    pass
+
+def inner_extract(doc_root, node_root, node_details, output_file=None, variables={}):
+    '''
+    Extracts data from a site according to rules
+
+    :param doc_root: document root element (created by lxml.html.fromstring())
+    :param node_root: string xpath for node root (all other nodes will be relative to root)
+    :param node_details: dictionary of string item names to their string xpath locations
+    :param output_file: filename to put results in
+    :param variables: dictionary of string variable names to their values
+    :return: Returns a json-like python object if no output file is specified else None
+    '''
+
+
+    pass #TODO read xpaths from dictionary and get data
 
 if __name__ == "__main__":
     pg_num = 1
@@ -54,9 +63,6 @@ if __name__ == "__main__":
         notices = tree.xpath("//div[contains(@class,'tribe-events-notices')]/ul/li/text()")
 
         done = False
-        for notice in notices:
-            if "no results" in notice.lower():
-                done = True
 
         if len(events) == 0:
             done = True
@@ -88,8 +94,15 @@ if __name__ == "__main__":
                 if len(stops) > 0:
                     stopstr = stops[0].strip()
                     try:
-                        try_datetime = dateutil.parse(stopstr, fuzzy=True)
+
+                        if 'start' in new_event.keys():
+                            try_datetime = dateutil.parse(stopstr, fuzzy=True, default=datetime.strptime(new_event['start'], '%m/%d/%Y %H:%M:%S'))
+                        else:
+                            try_datetime = dateutil.parse(stopstr, fuzzy=True)
+
                         output_datetime = datetime.strftime(try_datetime, '%m/%d/%Y %H:%M:%S')
+
+                        print(output_datetime)
                         new_event["stop"] = output_datetime
                     except: #TODO don't just exept everything
                         print("Unable to parse stop string '%s'" % stopstr)

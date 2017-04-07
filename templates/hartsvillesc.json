@@ -8,7 +8,7 @@
       "@var:pg_num" : 1,
 
       "#" : "variable can also be given a set range of values. If it is called more than its length, it will provide last number",
-      "@list:example" : [4, 5, 9, 0],
+      "#@list:example" : [4, 5, 9, 0],
 
       "#" : "url tag tells the start location of the crawler",
       "@url" : "https://www.hartsvillesc.gov/calendar/?action=tribe_photo&tribe_paged={$pg_num}&tribe_event_display=photo",
@@ -23,7 +23,9 @@
         "startstr" : ".//span[contains(@class,'tribe-event-date-start')]/text()",
         "stopstr" : ".//span[contains(@class,'tribe-event-time')]/text()",
         "description" : ".//div[contains(@class,'tribe-events-content')]/p/text()",
-        "link" : ".//a[contains(@class,'tribe-event-url')]/@href"
+        "link" : ".//a[contains(@class,'tribe-event-url')]/@href",
+
+
       },
 
       "#" : "Order of element recognition: vars -> other strings (looping with vars) -> nodes (inside loop)"
