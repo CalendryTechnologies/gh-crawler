@@ -89,6 +89,9 @@ def get_variables(annotations):
     return variables, lists
 
 def extract_process(rules_dict, output_file, variables={}):
+    '''
+    #TODO
+    '''
     annotations, misc = partition_rules(rules_dict) #get annotations and misc (there shouldn't be anything without annotation)
 
     new_variables, new_lists = get_variables(annotations)
