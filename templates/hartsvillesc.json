@@ -14,7 +14,7 @@
       "@url" : "https://www.hartsvillesc.gov/calendar/?action=tribe_photo&tribe_paged={$pg_num}&tribe_event_display=photo",
 
       "#" : "node contains data in an enclosed packet (i.e. events are all in one section of html)",
-      "@node" : {
+      "@node:events" : {
         "#" : "node xpath is the xpath to the node root",
         "@xpath" : "//div[contains(@class,'type-tribe_events')]",
 
