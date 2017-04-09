@@ -110,7 +110,7 @@ def extract_process(rules_dict, output_file, variables={}, debug=False):
     url = annotations.get("@url")
     if url == None: return False #url is required for process
 
-    results = []
+    results = {}
 
     done = False
     while not done:
@@ -137,11 +137,10 @@ def extract_process(rules_dict, output_file, variables={}, debug=False):
                 variables[list_key] = new_lists[list_key][cur_index+1]
 
         #add single result to the list
-        # for node_name in single_result.keys():
-        #     if node_name not in results.keys():
-        #         results[node_name] = {}
-        #     results[node_name].extend(single_result)
-        results.append(single_result)
+        for node_name in single_result.keys():
+            if node_name not in results.keys():
+                results[node_name] = [] #create the node name if it doesn't exist
+            results[node_name].extend(single_result[node_name]) #extend the node value list
 
     #write the results to file
     json_text = json.dumps(results, indent=4) #later we can take out indent which makes it readable
@@ -162,7 +161,7 @@ def extract_node_from_url(url, rules_dict, debug=False):
     '''
     page = requests.get(url)
     tree = html.fromstring(page.content)
-    return extract_node(tree, rules_dict, debug=debug)[0]
+    return extract_node(tree, rules_dict, debug=debug)[0] #extracts the base node
 
 def extract_node(doc_root, rules_dict, debug=False):
     '''

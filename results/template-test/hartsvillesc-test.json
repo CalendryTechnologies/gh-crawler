@@ -1,153 +1,143 @@
-[
-    [
+{
+    "events": [
         {
-            "events": [
-                {
-                    "title": "Centennial Farmers Market",
-                    "startstr": "June 22 @ 3:00 PM",
-                    "stopstr": "6:00 PM",
-                    "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
-                    "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-06-22/"
-                },
-                {
-                    "title": "Centennial Farmers Market",
-                    "startstr": "June 29 @ 3:00 PM",
-                    "stopstr": "6:00 PM",
-                    "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
-                    "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-06-29/"
-                },
-                {
-                    "title": "Centennial Farmers Market",
-                    "startstr": "July 6 @ 3:00 PM",
-                    "stopstr": "6:00 PM",
-                    "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
-                    "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-07-06/"
-                },
-                {
-                    "title": "Hartsville Farmers Market",
-                    "startstr": "July 8 @ 9:00 AM",
-                    "stopstr": "1:00 PM",
-                    "description": "Let's Get Fresh! Vegetables! Your Hartsville Farmers Market is on the 2nd Saturday of each month from April through December.",
-                    "link": "https://www.hartsvillesc.gov/event/hartsville-farmers-market/2017-07-08/"
-                },
-                {
-                    "title": "Centennial Farmers Market",
-                    "startstr": "July 13 @ 3:00 PM",
-                    "stopstr": "6:00 PM",
-                    "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
-                    "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-07-13/"
-                },
-                {
-                    "title": "Centennial Farmers Market",
-                    "startstr": "July 20 @ 3:00 PM",
-                    "stopstr": "6:00 PM",
-                    "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
-                    "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-07-20/"
-                },
-                {
-                    "title": "Centennial Farmers Market",
-                    "startstr": "July 27 @ 3:00 PM",
-                    "stopstr": "6:00 PM",
-                    "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
-                    "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-07-27/"
-                },
-                {
-                    "title": "Centennial Farmers Market",
-                    "startstr": "August 3 @ 3:00 PM",
-                    "stopstr": "6:00 PM",
-                    "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
-                    "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-08-03/"
-                },
-                {
-                    "title": "Small Business Support Meeting",
-                    "startstr": "August 7 @ 9:00 AM",
-                    "stopstr": "10:00 AM",
-                    "description": "The Greater Hartsville Chamber of Commerce will be hosting a networking event for small business owners, especially veterans, women, and minorities covering topics specific to success in small business.",
-                    "link": "https://www.hartsvillesc.gov/event/small-business-support-meeting-3/"
-                },
-                {
-                    "title": "Centennial Farmers Market",
-                    "startstr": "August 10 @ 3:00 PM",
-                    "stopstr": "6:00 PM",
-                    "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
-                    "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-08-10/"
-                }
-            ]
-        }
-    ],
-    [
+            "title": "Centennial Farmers Market",
+            "startstr": "June 22 @ 3:00 PM",
+            "stopstr": "6:00 PM",
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-06-22/"
+        },
         {
-            "events": [
-                {
-                    "title": "Hartsville Farmers Market",
-                    "startstr": "August 12 @ 9:00 AM",
-                    "stopstr": "1:00 PM",
-                    "description": "Let's Get Fresh! Vegetables! Your Hartsville Farmers Market is on the 2nd Saturday of each month from April through December.",
-                    "link": "https://www.hartsvillesc.gov/event/hartsville-farmers-market/2017-08-12/"
-                },
-                {
-                    "title": "Centennial Farmers Market",
-                    "startstr": "August 17 @ 3:00 PM",
-                    "stopstr": "6:00 PM",
-                    "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
-                    "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-08-17/"
-                },
-                {
-                    "title": "2017 Super Follies \u2013 Free Medical Clinic of Darlington County",
-                    "startstr": "August 19",
-                    "description": "The Free Medical Clinic of Darlington County would like to invite you to be a part of Super Follies 2017, our Talent Show, Dinner and Live/Silent Auction",
-                    "link": "https://www.hartsvillesc.gov/event/2017-super-follies-free-medical-clinic-of-darlington-county/"
-                },
-                {
-                    "title": "Centennial Farmers Market",
-                    "startstr": "August 24 @ 3:00 PM",
-                    "stopstr": "6:00 PM",
-                    "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
-                    "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-08-24/"
-                },
-                {
-                    "title": "HR Managers\u2019 Meeting",
-                    "startstr": "August 25 @ 9:00 AM",
-                    "stopstr": "10:00 AM",
-                    "description": "A Chamber breakfast meeting for HR Managers covering topics specific to managing a company's HR department.",
-                    "link": "https://www.hartsvillesc.gov/event/hr-managers-meeting-3/"
-                },
-                {
-                    "title": "Centennial Farmers Market",
-                    "startstr": "August 31 @ 3:00 PM",
-                    "stopstr": "6:00 PM",
-                    "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
-                    "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-08-31/"
-                },
-                {
-                    "title": "Small Business Support Meeting",
-                    "startstr": "September 1 @ 9:00 AM",
-                    "stopstr": "10:00 AM",
-                    "description": "The Greater Hartsville Chamber of Commerce will be hosting a networking event for small business owners, especially veterans, women, and minorities covering topics specific to success in small business.",
-                    "link": "https://www.hartsvillesc.gov/event/small-business-support-meeting-4/"
-                },
-                {
-                    "title": "Centennial Farmers Market",
-                    "startstr": "September 7 @ 3:00 PM",
-                    "stopstr": "6:00 PM",
-                    "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
-                    "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-09-07/"
-                },
-                {
-                    "title": "Hartsville Farmers Market",
-                    "startstr": "September 9 @ 9:00 AM",
-                    "stopstr": "1:00 PM",
-                    "description": "Let's Get Fresh! Vegetables! Your Hartsville Farmers Market is on the 2nd Saturday of each month from April through December.",
-                    "link": "https://www.hartsvillesc.gov/event/hartsville-farmers-market/2017-09-09/"
-                },
-                {
-                    "title": "Centennial Farmers Market",
-                    "startstr": "September 14 @ 3:00 PM",
-                    "stopstr": "6:00 PM",
-                    "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
-                    "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-09-14/"
-                }
-            ]
+            "title": "Centennial Farmers Market",
+            "startstr": "June 29 @ 3:00 PM",
+            "stopstr": "6:00 PM",
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-06-29/"
+        },
+        {
+            "title": "Centennial Farmers Market",
+            "startstr": "July 6 @ 3:00 PM",
+            "stopstr": "6:00 PM",
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-07-06/"
+        },
+        {
+            "title": "Hartsville Farmers Market",
+            "startstr": "July 8 @ 9:00 AM",
+            "stopstr": "1:00 PM",
+            "description": "Let's Get Fresh! Vegetables! Your Hartsville Farmers Market is on the 2nd Saturday of each month from April through December.",
+            "link": "https://www.hartsvillesc.gov/event/hartsville-farmers-market/2017-07-08/"
+        },
+        {
+            "title": "Centennial Farmers Market",
+            "startstr": "July 13 @ 3:00 PM",
+            "stopstr": "6:00 PM",
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-07-13/"
+        },
+        {
+            "title": "Centennial Farmers Market",
+            "startstr": "July 20 @ 3:00 PM",
+            "stopstr": "6:00 PM",
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-07-20/"
+        },
+        {
+            "title": "Centennial Farmers Market",
+            "startstr": "July 27 @ 3:00 PM",
+            "stopstr": "6:00 PM",
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-07-27/"
+        },
+        {
+            "title": "Centennial Farmers Market",
+            "startstr": "August 3 @ 3:00 PM",
+            "stopstr": "6:00 PM",
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-08-03/"
+        },
+        {
+            "title": "Small Business Support Meeting",
+            "startstr": "August 7 @ 9:00 AM",
+            "stopstr": "10:00 AM",
+            "description": "The Greater Hartsville Chamber of Commerce will be hosting a networking event for small business owners, especially veterans, women, and minorities covering topics specific to success in small business.",
+            "link": "https://www.hartsvillesc.gov/event/small-business-support-meeting-3/"
+        },
+        {
+            "title": "Centennial Farmers Market",
+            "startstr": "August 10 @ 3:00 PM",
+            "stopstr": "6:00 PM",
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-08-10/"
+        },
+        {
+            "title": "Hartsville Farmers Market",
+            "startstr": "August 12 @ 9:00 AM",
+            "stopstr": "1:00 PM",
+            "description": "Let's Get Fresh! Vegetables! Your Hartsville Farmers Market is on the 2nd Saturday of each month from April through December.",
+            "link": "https://www.hartsvillesc.gov/event/hartsville-farmers-market/2017-08-12/"
+        },
+        {
+            "title": "Centennial Farmers Market",
+            "startstr": "August 17 @ 3:00 PM",
+            "stopstr": "6:00 PM",
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-08-17/"
+        },
+        {
+            "title": "2017 Super Follies \u2013 Free Medical Clinic of Darlington County",
+            "startstr": "August 19",
+            "description": "The Free Medical Clinic of Darlington County would like to invite you to be a part of Super Follies 2017, our Talent Show, Dinner and Live/Silent Auction",
+            "link": "https://www.hartsvillesc.gov/event/2017-super-follies-free-medical-clinic-of-darlington-county/"
+        },
+        {
+            "title": "Centennial Farmers Market",
+            "startstr": "August 24 @ 3:00 PM",
+            "stopstr": "6:00 PM",
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-08-24/"
+        },
+        {
+            "title": "HR Managers\u2019 Meeting",
+            "startstr": "August 25 @ 9:00 AM",
+            "stopstr": "10:00 AM",
+            "description": "A Chamber breakfast meeting for HR Managers covering topics specific to managing a company's HR department.",
+            "link": "https://www.hartsvillesc.gov/event/hr-managers-meeting-3/"
+        },
+        {
+            "title": "Centennial Farmers Market",
+            "startstr": "August 31 @ 3:00 PM",
+            "stopstr": "6:00 PM",
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-08-31/"
+        },
+        {
+            "title": "Small Business Support Meeting",
+            "startstr": "September 1 @ 9:00 AM",
+            "stopstr": "10:00 AM",
+            "description": "The Greater Hartsville Chamber of Commerce will be hosting a networking event for small business owners, especially veterans, women, and minorities covering topics specific to success in small business.",
+            "link": "https://www.hartsvillesc.gov/event/small-business-support-meeting-4/"
+        },
+        {
+            "title": "Centennial Farmers Market",
+            "startstr": "September 7 @ 3:00 PM",
+            "stopstr": "6:00 PM",
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-09-07/"
+        },
+        {
+            "title": "Hartsville Farmers Market",
+            "startstr": "September 9 @ 9:00 AM",
+            "stopstr": "1:00 PM",
+            "description": "Let's Get Fresh! Vegetables! Your Hartsville Farmers Market is on the 2nd Saturday of each month from April through December.",
+            "link": "https://www.hartsvillesc.gov/event/hartsville-farmers-market/2017-09-09/"
+        },
+        {
+            "title": "Centennial Farmers Market",
+            "startstr": "September 14 @ 3:00 PM",
+            "stopstr": "6:00 PM",
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-09-14/"
         }
     ]
-]
+}
