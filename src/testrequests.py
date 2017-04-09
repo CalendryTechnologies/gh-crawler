@@ -162,7 +162,7 @@ def extract_node_from_url(url, rules_dict, debug=False):
     '''
     page = requests.get(url)
     tree = html.fromstring(page.content)
-    return extract_node(tree, rules_dict, debug=debug)
+    return extract_node(tree, rules_dict, debug=debug)[0]
 
 def extract_node(doc_root, rules_dict, debug=False):
     '''
