@@ -26,7 +26,7 @@
         "link" : ".//a[contains(@class,'tribe-event-url')]/@href",
 
         "#" : "@follow tags allow the following of links in search of information",
-        "#@follow" : {
+        "@follow" : {
           "@xpath" : ".//a[contains(@class,'tribe-event-url')]/@href",
           "postal-code" : ".//span[contains(@class, 'tribe-postal-code')]/text()"
         }
