@@ -161,6 +161,8 @@ def extract_node_from_url(url, rules_dict, debug=False):
     '''
     page = requests.get(url)
     tree = html.fromstring(page.content)
+    tree.make_links_absolute(url) #make sure href links are absolute for following later
+
     return extract_node(tree, rules_dict, debug=debug)[0] #extracts the base node
 
 def extract_node(doc_root, rules_dict, debug=False):
@@ -176,11 +178,12 @@ def extract_node(doc_root, rules_dict, debug=False):
     node_xpath = rules_dict.get("@xpath") or "." #gets xpath of node or uses relative location else
 
     nodes = {} #nodes dicionary contains each node
-    follows = {} #xpath links to follow for more detailed information
+    follows = [] #node to follow for more info
     for annotation in annotations.items():
         if annotation[0].startswith("@node:"):
             nodes[annotation[0].replace("@node:", "")] = annotation[1]
-        #TODO find follow nodes
+        if annotation[0] == "@follow":
+            follows.append(annotation[1])
 
     node_roots = doc_root.xpath(node_xpath) #gets all nodes
     node_results = []
@@ -194,8 +197,23 @@ def extract_node(doc_root, rules_dict, debug=False):
             if len(results) > 0:
                 output[name] = results[0].strip()
 
-        #TODO apply follow paths to pull from other sites
+        #following follow tags
+        for follow_rule in follows:
+            follow_link_xpath = follow_rule.get("@xpath") #TODO handle when @xpath tag DNE
 
+            follow_links = node_root.xpath(follow_link_xpath)
+            follow_link = follow_links[0] #TODO handle case when xpath DNE
+
+            page = requests.get(follow_link)
+            tree = html.fromstring(page.content)
+            tree.make_links_absolute(follow_link) #make sure href links are absolute for following later
+            #TODO use the other get from extract_node_from_url function instead of rewriting it
+
+            #TODO this fails because the content of a @follow tag is not exactly a node - could be rewritten but hopefully not
+            follow_results = extract_node(tree, follow_rule, debug=debug)[0]
+            #TODO add follow_results to the query result
+
+        #collecting internal nodes
         for node_name, node_rules in nodes.items():
             output[node_name] = extract_node(node_root, node_rules, debug=debug)
 
