@@ -200,21 +200,13 @@ def extract_node(doc_root, rules_dict, debug=False):
         #following follow tags
         for follow_rule in follows:
             follow_link_xpath = follow_rule.get("@xpath") #TODO handle when @xpath tag DNE
-            if "@xpath" in follow_rule.keys(): follow_rule.pop("@xpath")
-            print(follow_link_xpath)
+            follow_rule = {key:follow_rule[key] for key in follow_rule if key != "@xpath"} #temporarily remove the xpath tag
 
             follow_links = node_root.xpath(follow_link_xpath)
             follow_link = follow_links[0] #TODO handle case when xpath DNE
 
-            page = requests.get(follow_link)
-            tree = html.fromstring(page.content)
-            tree.make_links_absolute(follow_link) #make sure href links are absolute for following later
-            #TODO use the other get from extract_node_from_url function instead of rewriting it
-
-            continue
-            #TODO this fails because the content of a @follow tag is not exactly a node - could be rewritten but hopefully not
-            follow_results = extract_node(tree, follow_rule, debug=debug)[0]
-            #TODO add follow_results to the query result
+            follow_results = extract_node_from_url(follow_link, follow_rule, debug=debug)
+            output.update(follow_results)
 
         #collecting internal nodes
         for node_name, node_rules in nodes.items():
