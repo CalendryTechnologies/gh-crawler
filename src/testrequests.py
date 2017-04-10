@@ -12,12 +12,15 @@ import requests
 import json
 import string
 import itertools
+import threading
 
 from datetime import datetime
 import dateutil.parser as dateutil #TODO actually use this
 
 import os, sys
 from os.path import join as pathjoin, abspath, dirname
+
+import timeit #TODO remove - testing only
 
 
 def project_root():
@@ -73,7 +76,11 @@ def extract(rules_dict, debug=False):
         #TODO do this with threading/multiprocessing since they are all separate  #TODO maybe not because of end condition (see later)
         process_rules = rules_dict[process_key]
         process_output = pathjoin(output_dir, process_key + ".json") #save to process_key with .json extension
-        extract_process(process_rules, process_output, debug=debug) #extract from the individual process
+
+        thread = threading.Thread(target=extract_process, args=(process_rules, process_output, {}, debug))
+        thread.start()
+
+        #extract_process(process_rules, process_output, debug=debug) #extract from the individual process
 
 def get_variables(annotations):
     '''
