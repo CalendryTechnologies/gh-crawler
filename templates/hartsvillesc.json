@@ -1,40 +1,42 @@
 {
-  "#" : "top level tag contains the information to crawl a site (or multiple using vars)",
-  "#" : "output results are placed according to name in the output_dir i.e. results/hartsvillesc.json",
+  "#1" : "top level tag contains the information to crawl a site (or multiple using vars)",
+  "#2" : "output results are placed according to name in the output_dir i.e. results/hartsvillesc.json",
   "hartsvillesc-test" : {
-      "#" : "variables are declared @var:name or @list:name and used {$name}, keeps looping until all are finished or the page yields no results",
+      "#1" : "variables are declared @var:name or @list:name and used {$name}, keeps looping until all are finished or the page yields no results",
 
-      "#" : "variable used in looping with numeric value adds one on each iteration (never ends so lack of results will signal end)",
+      "#2" : "variable used in looping with numeric value adds one on each iteration (never ends so lack of results will signal end)",
       "#@var:pg_num" : 1,
 
-      "#" : "variable can also be given a set range of values. If it is called more than its length, it will provide last number",
+      "#3" : "variable can also be given a set range of values. If it is called more than its length, it will provide last number",
       "@list:pg_num" : [4, 5],
 
-      "#" : "url tag tells the start location of the crawler",
+      "#4" : "url tag tells the start location of the crawler",
       "@url" : "https://www.hartsvillesc.gov/calendar/?action=tribe_photo&tribe_paged={$pg_num}&tribe_event_display=photo",
 
-      "#" : "node contains data in an enclosed packet (i.e. events are all in one section of html)",
+      "#5" : "node contains data in an enclosed packet (i.e. events are all in one section of html)",
       "@node:events" : {
-        "#" : "node xpath is the xpath to the node root",
+        "#1" : "node xpath is the xpath to the node root",
         "@xpath" : ".//div[contains(@class,'type-tribe_events')]",
 
-        "#" : "attributes are denoted without @ and contain relative xpath to them from node root",
+        "#2" : "attributes are denoted without @ and contain relative xpath to them from node root",
         "title" : ".//h2[contains(@class,'tribe-events-list-event-title')]/a/text()",
         "startstr" : ".//span[contains(@class,'tribe-event-date-start')]/text()",
         "stopstr" : ".//span[contains(@class,'tribe-event-time')]/text()",
         "description" : ".//div[contains(@class,'tribe-events-content')]/p/text()",
         "link" : ".//a[contains(@class,'tribe-event-url')]/@href",
 
-        "#" : "@follow tags allow the following of links in search of information",
+		"@filters" : ["time"],
+
+        "#3" : "@follow tags allow the following of links in search of information",
         "@follow" : {
           "@xpath" : ".//a[contains(@class,'tribe-event-url')]/@href",
           "postal-code" : ".//span[contains(@class, 'tribe-postal-code')]/text()"
         }
       },
 
-      "#" : "Order of element recognition: vars -> other strings (looping with vars) -> nodes (inside loop)"
+      "#6" : "Order of element recognition: vars -> other strings (looping with vars) -> nodes (inside loop)"
   },
 
-  "#" : "Output file for json data collected (relative to results directory)",
+  "#3" : "Output file for json data collected (relative to results directory)",
   "@output_dir" : "template-test"
 }

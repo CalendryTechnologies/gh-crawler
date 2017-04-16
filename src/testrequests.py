@@ -186,11 +186,14 @@ def extract_node(doc_root, rules_dict, debug=False):
 
     nodes = {} #nodes dicionary contains each node
     follows = [] #node to follow for more info
+    filters = set()
     for annotation in annotations.items():
         if annotation[0].startswith("@node:"):
             nodes[annotation[0].replace("@node:", "")] = annotation[1]
         if annotation[0] == "@follow":
             follows.append(annotation[1])
+        if annotation[0] == "@filters":
+            filters.update(set(annotation[1]))
 
     node_roots = doc_root.xpath(node_xpath) #gets all nodes
     node_results = []
@@ -219,24 +222,38 @@ def extract_node(doc_root, rules_dict, debug=False):
         for node_name, node_rules in nodes.items():
             output[node_name] = extract_node(node_root, node_rules, debug=debug)
 
+        for filter_name in filters:
+            filter = filter_dict.get(filter_name)
+            if filter:
+                #filter is not None
+                filter(output)
+
         node_results.append(output) #add this node instance to the total list of results
 
     return node_results
 
-#TODO this may be depricated because it is an unnecessary level of function
-def inner_extract(doc_root, node_root, node_details, output_file, variables={}, debug=False):
+def filter_time(node):
     '''
-    Extracts data from a site according to rules
-
-    :param doc_root: document root element (created by lxml.html.fromstring())
-    :param node_root: string xpath for node root (all other nodes will be relative to root)
-    :param node_details: dictionary of string item names to their string xpath locations
-    :param output_file: filename to put results in
-    :param variables: dictionary of string variable names to their values
-    :return: Returns a json-like python object if no output file is specified else None
+    Parses 'startstr' and 'stopstr' to add 'start' and 'stop'
+    
+    :param node: dictionary to be modified (modified in place)
     '''
+    startstr = node.get('startstr')
+    stopstr = node.get('stopstr')
+    start_datetime = None
+    if startstr:
+        #the node has a start string
+        start_datetime = dateutil.parse(startstr, fuzzy=True)
+        new_startstr = datetime.strftime(start_datetime, '%m/%d/%Y %H:%M:%S')
+        node['start'] = new_startstr
+    if stopstr:
+        stop_datetime = dateutil.parse(stopstr, fuzzy=True, default=start_datetime)
+        new_stopstr = datetime.strftime(stop_datetime, '%m/%d/%Y %H:%M:%S')
+        node['stop'] = new_stopstr
 
-    pass #TODO read xpaths from dictionary and get data
+filter_dict = {
+    'time' : filter_time
+}
 
 if __name__ == "__main__":
     pg_num = 1
