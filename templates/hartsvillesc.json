@@ -5,10 +5,10 @@
       "#" : "variables are declared @var:name or @list:name and used {$name}, keeps looping until all are finished or the page yields no results",
 
       "#" : "variable used in looping with numeric value adds one on each iteration (never ends so lack of results will signal end)",
-      "#@var:pg_num" : 1,
+      "@var:pg_num" : 1,
 
       "#" : "variable can also be given a set range of values. If it is called more than its length, it will provide last number",
-      "@list:pg_num" : [4, 5],
+      "#@list:pg_num" : [4, 5],
 
       "#" : "url tag tells the start location of the crawler",
       "@url" : "https://www.hartsvillesc.gov/calendar/?action=tribe_photo&tribe_paged={$pg_num}&tribe_event_display=photo",
@@ -37,6 +37,7 @@
 
       "#" : "Order of element recognition: vars -> other strings (looping with vars) -> nodes (inside loop)"
   },
+
 
   "#" : "Output file for json data collected (relative to results directory)",
   "@output_dir" : "template-test"
