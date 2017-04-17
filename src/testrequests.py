@@ -11,7 +11,6 @@ from lxml import html
 import requests
 import json
 import string
-import itertools
 import threading
 
 from datetime import datetime
@@ -20,7 +19,7 @@ import dateutil.parser as dateutil #TODO actually use this
 import os, sys
 from os.path import join as pathjoin, abspath, dirname
 
-import timeit #TODO remove - testing only
+import custom_filters
 
 
 def project_root():
@@ -108,7 +107,7 @@ def extract_process(rules_dict, output_file, variables={}, debug=False):
     :param output_file: Filename to output results to in json format
     :return: returns True if the extraction was successful else False
     '''
-    annotations, misc = partition_rules(rules_dict) #get annotations and misc (there shouldn't be anything without annotation)
+    annotations = partition_rules(rules_dict)[0] #get annotations and misc (there shouldn't be anything without annotation)
 
     new_variables, new_lists = get_variables(annotations)
     variables.update(new_variables) #add variables to the dictionary
@@ -171,7 +170,7 @@ def extract_node_from_url(url, rules_dict, debug=False):
     tree.make_links_absolute(url) #make sure href links are absolute for following later
 
     return extract_node(tree, rules_dict, debug=debug)[0] #extracts the base node
-
+    
 def extract_node(doc_root, rules_dict, debug=False):
     '''
     Extracts a complete node from a document via a ruled dictionary
@@ -186,14 +185,14 @@ def extract_node(doc_root, rules_dict, debug=False):
 
     nodes = {} #nodes dicionary contains each node
     follows = [] #node to follow for more info
-    filters = set()
+    filters = [] #filters to apply in format (type, kwargs)
     for annotation in annotations.items():
         if annotation[0].startswith("@node:"):
             nodes[annotation[0].replace("@node:", "")] = annotation[1]
         if annotation[0] == "@follow":
             follows.append(annotation[1])
-        if annotation[0] == "@filters":
-            filters.update(set(annotation[1]))
+        if annotation[0].startswith("@filter"):
+            filters.append((annotation[0].replace("@filter:", ""), annotation[1]))
 
     node_roots = doc_root.xpath(node_xpath) #gets all nodes
     node_results = []
@@ -222,11 +221,12 @@ def extract_node(doc_root, rules_dict, debug=False):
         for node_name, node_rules in nodes.items():
             output[node_name] = extract_node(node_root, node_rules, debug=debug)
 
-        for filter_name in filters:
-            filter = filter_dict.get(filter_name)
+        for filter_name, filter_kwargs in filters:
+            #custom_filter = filter_dict.get(filter_name)
+            custom_filter = custom_filters.get_filter(filter_name)
             if filter:
                 #filter is not None
-                filter(output)
+                custom_filter(output, **filter_kwargs)
 
         node_results.append(output) #add this node instance to the total list of results
 

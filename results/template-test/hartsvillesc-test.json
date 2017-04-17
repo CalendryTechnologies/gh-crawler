@@ -1,199 +1,216 @@
 {
     "events": [
         {
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-06-29/",
             "postal-code": "29552",
-            "title": "Centennial Farmers Market",
-            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
             "startstr": "June 29 @ 3:00 PM",
-            "stop": "06/29/2017 18:00:00",
+            "title": "Centennial Farmers Market",
             "start": "06/29/2017 15:00:00",
+            "phone": "(843) 383-3020",
             "stopstr": "6:00 PM",
-            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-06-29/"
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "stop": "06/29/2017 18:00:00"
         },
         {
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-07-06/",
             "postal-code": "29552",
-            "title": "Centennial Farmers Market",
-            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
             "startstr": "July 6 @ 3:00 PM",
-            "stop": "07/06/2017 18:00:00",
+            "title": "Centennial Farmers Market",
             "start": "07/06/2017 15:00:00",
+            "phone": "(843) 383-3020",
             "stopstr": "6:00 PM",
-            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-07-06/"
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "stop": "07/06/2017 18:00:00"
         },
         {
+            "link": "https://www.hartsvillesc.gov/event/hartsville-farmers-market/2017-07-08/",
             "postal-code": "29562",
-            "title": "Hartsville Farmers Market",
-            "description": "Let's Get Fresh! Vegetables! Your Hartsville Farmers Market is on the 2nd Saturday of each month from April through December.",
             "startstr": "July 8 @ 9:00 AM",
-            "stop": "07/08/2017 13:00:00",
+            "title": "Hartsville Farmers Market",
             "start": "07/08/2017 09:00:00",
+            "phone": "(843) 917-0602",
             "stopstr": "1:00 PM",
-            "link": "https://www.hartsvillesc.gov/event/hartsville-farmers-market/2017-07-08/"
+            "description": "Let's Get Fresh! Vegetables! Your Hartsville Farmers Market is on the 2nd Saturday of each month from April through December.",
+            "stop": "07/08/2017 13:00:00"
         },
         {
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-07-13/",
             "postal-code": "29552",
-            "title": "Centennial Farmers Market",
-            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
             "startstr": "July 13 @ 3:00 PM",
-            "stop": "07/13/2017 18:00:00",
+            "title": "Centennial Farmers Market",
             "start": "07/13/2017 15:00:00",
+            "phone": "(843) 383-3020",
             "stopstr": "6:00 PM",
-            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-07-13/"
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "stop": "07/13/2017 18:00:00"
         },
         {
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-07-20/",
             "postal-code": "29552",
-            "title": "Centennial Farmers Market",
-            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
             "startstr": "July 20 @ 3:00 PM",
-            "stop": "07/20/2017 18:00:00",
+            "title": "Centennial Farmers Market",
             "start": "07/20/2017 15:00:00",
+            "phone": "(843) 383-3020",
             "stopstr": "6:00 PM",
-            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-07-20/"
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "stop": "07/20/2017 18:00:00"
         },
         {
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-07-27/",
             "postal-code": "29552",
-            "title": "Centennial Farmers Market",
-            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
             "startstr": "July 27 @ 3:00 PM",
-            "stop": "07/27/2017 18:00:00",
-            "start": "07/27/2017 15:00:00",
-            "stopstr": "6:00 PM",
-            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-07-27/"
-        },
-        {
-            "postal-code": "29552",
             "title": "Centennial Farmers Market",
-            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
-            "startstr": "August 3 @ 3:00 PM",
-            "stop": "08/03/2017 18:00:00",
-            "start": "08/03/2017 15:00:00",
+            "start": "07/27/2017 15:00:00",
+            "phone": "(843) 383-3020",
             "stopstr": "6:00 PM",
-            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-08-03/"
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "stop": "07/27/2017 18:00:00"
         },
         {
-            "title": "Small Business Support Meeting",
-            "description": "The Greater Hartsville Chamber of Commerce will be hosting a networking event for small business owners, especially veterans, women, and minorities covering topics specific to success in small business.",
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-08-03/",
+            "postal-code": "29552",
+            "startstr": "August 3 @ 3:00 PM",
+            "title": "Centennial Farmers Market",
+            "start": "08/03/2017 15:00:00",
+            "phone": "(843) 383-3020",
+            "stopstr": "6:00 PM",
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "stop": "08/03/2017 18:00:00"
+        },
+        {
+            "link": "https://www.hartsvillesc.gov/event/small-business-support-meeting-3/",
             "startstr": "August 7 @ 9:00 AM",
-            "stop": "08/07/2017 10:00:00",
+            "title": "Small Business Support Meeting",
             "start": "08/07/2017 09:00:00",
             "stopstr": "10:00 AM",
-            "link": "https://www.hartsvillesc.gov/event/small-business-support-meeting-3/"
+            "description": "The Greater Hartsville Chamber of Commerce will be hosting a networking event for small business owners, especially veterans, women, and minorities covering topics specific to success in small business.",
+            "stop": "08/07/2017 10:00:00"
         },
         {
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-08-10/",
             "postal-code": "29552",
-            "title": "Centennial Farmers Market",
-            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
             "startstr": "August 10 @ 3:00 PM",
-            "stop": "08/10/2017 18:00:00",
-            "start": "08/10/2017 15:00:00",
-            "stopstr": "6:00 PM",
-            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-08-10/"
-        },
-        {
-            "postal-code": "29562",
-            "title": "Hartsville Farmers Market",
-            "description": "Let's Get Fresh! Vegetables! Your Hartsville Farmers Market is on the 2nd Saturday of each month from April through December.",
-            "startstr": "August 12 @ 9:00 AM",
-            "stop": "08/12/2017 13:00:00",
-            "start": "08/12/2017 09:00:00",
-            "stopstr": "1:00 PM",
-            "link": "https://www.hartsvillesc.gov/event/hartsville-farmers-market/2017-08-12/"
-        },
-        {
-            "postal-code": "29552",
             "title": "Centennial Farmers Market",
-            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
-            "startstr": "August 17 @ 3:00 PM",
-            "stop": "08/17/2017 18:00:00",
-            "start": "08/17/2017 15:00:00",
+            "start": "08/10/2017 15:00:00",
+            "phone": "(843) 383-3020",
             "stopstr": "6:00 PM",
-            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-08-17/"
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "stop": "08/10/2017 18:00:00"
+        },
+        {
+            "link": "https://www.hartsvillesc.gov/event/hartsville-farmers-market/2017-08-12/",
+            "postal-code": "29562",
+            "startstr": "August 12 @ 9:00 AM",
+            "title": "Hartsville Farmers Market",
+            "start": "08/12/2017 09:00:00",
+            "phone": "(843) 917-0602",
+            "stopstr": "1:00 PM",
+            "description": "Let's Get Fresh! Vegetables! Your Hartsville Farmers Market is on the 2nd Saturday of each month from April through December.",
+            "stop": "08/12/2017 13:00:00"
+        },
+        {
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-08-17/",
+            "postal-code": "29552",
+            "startstr": "August 17 @ 3:00 PM",
+            "title": "Centennial Farmers Market",
+            "start": "08/17/2017 15:00:00",
+            "phone": "(843) 383-3020",
+            "stopstr": "6:00 PM",
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "stop": "08/17/2017 18:00:00"
         },
         {
             "postal-code": "29554",
-            "title": "2017 Super Follies \u2013 Free Medical Clinic of Darlington County",
-            "description": "The Free Medical Clinic of Darlington County would like to invite you to be a part of Super Follies 2017, our Talent Show, Dinner and Live/Silent Auction",
             "startstr": "August 19",
+            "title": "2017 Super Follies \u2013 Free Medical Clinic of Darlington County",
             "start": "08/19/2017 00:00:00",
-            "link": "https://www.hartsvillesc.gov/event/2017-super-follies-free-medical-clinic-of-darlington-county/"
+            "phone": "843-332-6401",
+            "link": "https://www.hartsvillesc.gov/event/2017-super-follies-free-medical-clinic-of-darlington-county/",
+            "description": "The Free Medical Clinic of Darlington County would like to invite you to be a part of Super Follies 2017, our Talent Show, Dinner and Live/Silent Auction"
         },
         {
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-08-24/",
             "postal-code": "29552",
-            "title": "Centennial Farmers Market",
-            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
             "startstr": "August 24 @ 3:00 PM",
-            "stop": "08/24/2017 18:00:00",
+            "title": "Centennial Farmers Market",
             "start": "08/24/2017 15:00:00",
+            "phone": "(843) 383-3020",
             "stopstr": "6:00 PM",
-            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-08-24/"
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "stop": "08/24/2017 18:00:00"
         },
         {
-            "title": "HR Managers\u2019 Meeting",
-            "description": "A Chamber breakfast meeting for HR Managers covering topics specific to managing a company's HR department.",
+            "link": "https://www.hartsvillesc.gov/event/hr-managers-meeting-3/",
             "startstr": "August 25 @ 9:00 AM",
-            "stop": "08/25/2017 10:00:00",
+            "title": "HR Managers\u2019 Meeting",
             "start": "08/25/2017 09:00:00",
             "stopstr": "10:00 AM",
-            "link": "https://www.hartsvillesc.gov/event/hr-managers-meeting-3/"
+            "description": "A Chamber breakfast meeting for HR Managers covering topics specific to managing a company's HR department.",
+            "stop": "08/25/2017 10:00:00"
         },
         {
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-08-31/",
             "postal-code": "29552",
-            "title": "Centennial Farmers Market",
-            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
             "startstr": "August 31 @ 3:00 PM",
-            "stop": "08/31/2017 18:00:00",
+            "title": "Centennial Farmers Market",
             "start": "08/31/2017 15:00:00",
+            "phone": "(843) 383-3020",
             "stopstr": "6:00 PM",
-            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-08-31/"
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "stop": "08/31/2017 18:00:00"
         },
         {
-            "title": "Small Business Support Meeting",
-            "description": "The Greater Hartsville Chamber of Commerce will be hosting a networking event for small business owners, especially veterans, women, and minorities covering topics specific to success in small business.",
+            "link": "https://www.hartsvillesc.gov/event/small-business-support-meeting-4/",
             "startstr": "September 1 @ 9:00 AM",
-            "stop": "09/01/2017 10:00:00",
+            "title": "Small Business Support Meeting",
             "start": "09/01/2017 09:00:00",
             "stopstr": "10:00 AM",
-            "link": "https://www.hartsvillesc.gov/event/small-business-support-meeting-4/"
+            "description": "The Greater Hartsville Chamber of Commerce will be hosting a networking event for small business owners, especially veterans, women, and minorities covering topics specific to success in small business.",
+            "stop": "09/01/2017 10:00:00"
         },
         {
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-09-07/",
             "postal-code": "29552",
-            "title": "Centennial Farmers Market",
-            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
             "startstr": "September 7 @ 3:00 PM",
-            "stop": "09/07/2017 18:00:00",
+            "title": "Centennial Farmers Market",
             "start": "09/07/2017 15:00:00",
+            "phone": "(843) 383-3020",
             "stopstr": "6:00 PM",
-            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-09-07/"
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "stop": "09/07/2017 18:00:00"
         },
         {
+            "link": "https://www.hartsvillesc.gov/event/hartsville-farmers-market/2017-09-09/",
             "postal-code": "29562",
-            "title": "Hartsville Farmers Market",
-            "description": "Let's Get Fresh! Vegetables! Your Hartsville Farmers Market is on the 2nd Saturday of each month from April through December.",
             "startstr": "September 9 @ 9:00 AM",
-            "stop": "09/09/2017 13:00:00",
+            "title": "Hartsville Farmers Market",
             "start": "09/09/2017 09:00:00",
+            "phone": "(843) 917-0602",
             "stopstr": "1:00 PM",
-            "link": "https://www.hartsvillesc.gov/event/hartsville-farmers-market/2017-09-09/"
+            "description": "Let's Get Fresh! Vegetables! Your Hartsville Farmers Market is on the 2nd Saturday of each month from April through December.",
+            "stop": "09/09/2017 13:00:00"
         },
         {
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-09-14/",
             "postal-code": "29552",
-            "title": "Centennial Farmers Market",
-            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
             "startstr": "September 14 @ 3:00 PM",
-            "stop": "09/14/2017 18:00:00",
+            "title": "Centennial Farmers Market",
             "start": "09/14/2017 15:00:00",
+            "phone": "(843) 383-3020",
             "stopstr": "6:00 PM",
-            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-09-14/"
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "stop": "09/14/2017 18:00:00"
         },
         {
+            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-09-21/",
             "postal-code": "29552",
-            "title": "Centennial Farmers Market",
-            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
             "startstr": "September 21 @ 3:00 PM",
-            "stop": "09/21/2017 18:00:00",
+            "title": "Centennial Farmers Market",
             "start": "09/21/2017 15:00:00",
+            "phone": "(843) 383-3020",
             "stopstr": "6:00 PM",
-            "link": "https://www.hartsvillesc.gov/event/centennial-farmers-market/2017-09-21/"
+            "description": "Let\u2019s Get Fresh! Vegetables! The Centennial Farmers Market is downtown every Thursday from 3-6pm.",
+            "stop": "09/21/2017 18:00:00"
         }
     ]
 }
