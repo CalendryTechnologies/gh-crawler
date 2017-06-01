@@ -12,26 +12,18 @@ import requests
 import json
 import string
 import threading
-
-import os, sys
-from os.path import join as pathjoin, abspath, dirname
+import os
+from os.path import join as pathjoin
 
 import custom_filters
+from general import PROJECT_ROOT
 
-
-def project_root():
-    '''
-    Gets absolute path of project root
-
-    :return: Returns absolute path string for project root directory
-    '''
-    return pathjoin(dirname(abspath(sys.argv[0])), "..") #gets root of project (moving out of src)
 
 def extract_from_template(json_filename, debug=False):
     '''
     Reads json template file then extracts data according to its rules and writes it where specified
     '''
-    template = get_template(pathjoin(project_root(), "templates", json_filename)) #filename in templates directory
+    template = get_template(pathjoin(PROJECT_ROOT, "templates", json_filename)) #filename in templates directory
     extract(template, debug=debug)
 
 def get_template(json_filename):
@@ -63,7 +55,7 @@ def extract(rules_dict, debug=False):
     '''
     annotations, processes = partition_rules(rules_dict)
 
-    output_dir = pathjoin(project_root(), "results", (annotations.get("@output_dir") or ".")) #get output_dir or use blank relative path #TODO possibly need to use . for relative location
+    output_dir = pathjoin(PROJECT_ROOT, "results", (annotations.get("@output_dir") or ".")) #get output_dir or use blank relative path #TODO possibly need to use . for relative location
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 

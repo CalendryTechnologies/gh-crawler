@@ -1,0 +1,615 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "The Events Calendar REST API",
+    "description": "The Events Calendar REST API allows accessing upcoming events information easily and conveniently."
+  },
+  "host": "http://gohartsville.com",
+  "basePath": "/wp-json/tribe/events/v1/",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "applicatin/json"
+  ],
+  "paths": {
+    "/doc:": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Returns the documentation for The Events Calendar REST API in Swagger consumable format."
+          }
+        }
+      }
+    },
+    "/events:": {
+      "get": {
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The archive page to return",
+            "type": "integer",
+            "required": false,
+            "default": 1
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "description": "The number of events to return on each page",
+            "type": "integer",
+            "required": false,
+            "default": "10"
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "description": "Events should start after the specified date",
+            "type": "date",
+            "required": false,
+            "default": "2017-05-31 01:54:00"
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "description": "Events should start before the specified date",
+            "type": "string",
+            "required": false,
+            "default": "2017-05-31 01:54:00"
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "description": "Events should contain the specified string in the title or description",
+            "type": "string",
+            "required": false,
+            "default": ""
+          },
+          {
+            "name": "categories",
+            "in": "query",
+            "description": "Events should be assigned one of the specified categories slugs or IDs",
+            "type": "array",
+            "required": false,
+            "default": ""
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "description": "Events should be assigned one of the specified tags slugs or IDs",
+            "type": "array",
+            "required": false,
+            "default": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns all the upcoming events matching the search criteria",
+            "schema": {
+              "title": "events",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Event"
+              }
+            }
+          },
+          "400": {
+            "description": "One or more of the specified query variables has a bad format"
+          },
+          "404": {
+            "description": "No events match the query or the requested page was not found."
+          }
+        }
+      }
+    },
+    "/events/{id}:": {
+      "get": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "the event post ID",
+            "type": "integer",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the data of the event with the specified post ID",
+            "schema": {
+              "$ref": "#/definitions/Event"
+            }
+          },
+          "400": {
+            "description": "The event post ID is missing."
+          },
+          "403": {
+            "description": "The event with the specified ID is not accesible."
+          },
+          "404": {
+            "description": "An event with the specified event does not exist."
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Event": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "int",
+          "description": "The event WordPress post ID"
+        },
+        "global_id": {
+          "type": "string",
+          "description": "The event ID used to globally identify in Event Aggregator"
+        },
+        "global_id_lineage": {
+          "type": "array",
+          "description": "An Array containing the lineage of where this event comes from, this should not change after the event is created."
+        },
+        "author": {
+          "type": "int",
+          "description": "The event author WordPress post ID"
+        },
+        "date": {
+          "type": "string",
+          "description": "The event creation date in the site timezone"
+        },
+        "date_utc": {
+          "type": "string",
+          "description": "The event creation date in UTC time"
+        },
+        "modified": {
+          "type": "string",
+          "description": "The event last modification date in the site timezone"
+        },
+        "modified_utc": {
+          "type": "string",
+          "description": "The event last modification date in UTC time"
+        },
+        "url": {
+          "type": "string",
+          "description": "The URL to the event page"
+        },
+        "rest_url": {
+          "type": "string",
+          "description": "The TEC REST API link to fetch this event"
+        },
+        "title": {
+          "type": "string",
+          "description": "The event name"
+        },
+        "description": {
+          "type": "string",
+          "description": "The event long description"
+        },
+        "excerpt": {
+          "type": "string",
+          "description": "The event short description"
+        },
+        "image": {
+          "type": "object",
+          "description": "The event featured image details if set",
+          "$ref": "#/definitions/Image"
+        },
+        "all_day": {
+          "type": "boolean",
+          "description": "Whether or not this event is an all day Event"
+        },
+        "start_date": {
+          "type": "string",
+          "description": "The event start date in the event or site timezone"
+        },
+        "start_date_details": {
+          "type": "array",
+          "description": "An array of each component of the event start date",
+          "$ref": "#/definitions/DateDetails"
+        },
+        "end_date": {
+          "type": "string",
+          "description": "The event end date in the event or site timezone"
+        },
+        "end_date_details": {
+          "type": "array",
+          "description": "An array of each component of the event end date",
+          "$ref": "#/definitions/DateDetails"
+        },
+        "utc_start_date": {
+          "type": "string",
+          "description": "The event start date in UTC time"
+        },
+        "utc_start_date_details": {
+          "type": "array",
+          "description": "An array of each component of the event start date in UTC time",
+          "$ref": "#/definitions/DateDetails"
+        },
+        "utc_end_date": {
+          "type": "string",
+          "description": "The event end date in UTC time"
+        },
+        "utc_end_date_details": {
+          "type": "array",
+          "description": "An array of each component of the event end date in UTC time",
+          "$ref": "#/definitions/DateDetails"
+        },
+        "timezone": {
+          "type": "string",
+          "description": "The event timezone string"
+        },
+        "timezone_abbr": {
+          "type": "string",
+          "description": "The abbreviated event timezone string"
+        },
+        "cost": {
+          "type": "string",
+          "description": "The event cost including the currency symbol"
+        },
+        "cost_details": {
+          "type": "array",
+          "description": "The event cost details",
+          "$ref": "#/definitions/CostDetails"
+        },
+        "website": {
+          "type": "string",
+          "description": "The event website URL"
+        },
+        "show_map": {
+          "type": "bool",
+          "description": "Whether the map should be shown for the event or not"
+        },
+        "show_map_link": {
+          "type": "bool",
+          "description": "Whether the map link should be shown for the event or not"
+        },
+        "hide_from_listings": {
+          "type": "bool",
+          "description": "Whether an event should be hidden from the calendar view or not"
+        },
+        "sticky": {
+          "type": "bool",
+          "description": "Whether an event is sticky in the calendar view or not"
+        },
+        "featured": {
+          "type": "bool",
+          "description": "Whethere the event is featured in the calendar or not"
+        },
+        "categories": {
+          "type": "array",
+          "description": "The event categories",
+          "$ref": "#/definitions/Term"
+        },
+        "tags": {
+          "type": "array",
+          "description": "The event tags",
+          "$ref": "#/definitions/Term"
+        },
+        "venue": {
+          "type": "object",
+          "description": "The event venue",
+          "$ref": "#/definitions/Venue"
+        },
+        "organizer": {
+          "type": "array",
+          "description": "The event organizers",
+          "$ref": "#/definitions/Organizer"
+        }
+      }
+    },
+    "Venue": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "int",
+          "description": "The venue WordPress post ID"
+        },
+        "global_id": {
+          "type": "string",
+          "description": "The venue ID used to globally identify in Event Aggregator"
+        },
+        "global_id_lineage": {
+          "type": "array",
+          "description": "An Array containing the lineage of where this organizer comes from, this should not change after the organizer is created."
+        },
+        "author": {
+          "type": "int",
+          "description": "The venue author WordPress post ID"
+        },
+        "date": {
+          "type": "string",
+          "description": "The venue creation date in the site timezone"
+        },
+        "date_utc": {
+          "type": "string",
+          "description": "The venue creation date in UTC time"
+        },
+        "modified": {
+          "type": "string",
+          "description": "The venue last modification date in the site timezone"
+        },
+        "modified_utc": {
+          "type": "string",
+          "description": "The venue last modification date in UTC time"
+        },
+        "url": {
+          "type": "string",
+          "description": "The URL to the venue page"
+        },
+        "venue": {
+          "type": "string",
+          "description": "The venue name"
+        },
+        "description": {
+          "type": "string",
+          "description": "The venue long description"
+        },
+        "excerpt": {
+          "type": "string",
+          "description": "The venue short description"
+        },
+        "image": {
+          "type": "string",
+          "description": "The event featured image details if set",
+          "$ref": "#/definitions/Image"
+        },
+        "show_map": {
+          "type": "bool",
+          "description": "Whether the map should be shown for the venue or not"
+        },
+        "show_map_link": {
+          "type": "bool",
+          "description": "Whether the map link should be shown for the venue or not"
+        },
+        "address": {
+          "type": "string",
+          "description": "The venue address"
+        },
+        "city": {
+          "type": "string",
+          "description": "The venue city"
+        },
+        "country": {
+          "type": "string",
+          "description": "The venue country"
+        },
+        "province": {
+          "type": "string",
+          "description": "The venue province"
+        },
+        "state": {
+          "type": "string",
+          "description": "The venue state"
+        },
+        "zip": {
+          "type": "string",
+          "description": "The venue ZIP code"
+        },
+        "phone": {
+          "type": "string",
+          "description": "The venue phone number"
+        },
+        "website": {
+          "type": "string",
+          "description": "The venue website URL"
+        },
+        "stateprovince": {
+          "type": "string",
+          "description": "The venue state or province"
+        }
+      }
+    },
+    "Organizer": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "int",
+          "description": "The organizer WordPress post ID"
+        },
+        "global_id": {
+          "type": "string",
+          "description": "The organizer ID used to globally identify in Event Aggregator"
+        },
+        "global_id_lineage": {
+          "type": "array",
+          "description": "An Array containing the lineage of where this organizer comes from, this should not change after the organizer is created."
+        },
+        "author": {
+          "type": "int",
+          "description": "The organizer author WordPress post ID"
+        },
+        "date": {
+          "type": "string",
+          "description": "The organizer creation date in the site timezone"
+        },
+        "date_utc": {
+          "type": "string",
+          "description": "The organizer creation date in UTC time"
+        },
+        "modified": {
+          "type": "string",
+          "description": "The organizer last modification date in the site timezone"
+        },
+        "modified_utc": {
+          "type": "string",
+          "description": "The organizer last modification date in UTC time"
+        },
+        "url": {
+          "type": "string",
+          "description": "The URL to the organizer page"
+        },
+        "organizer": {
+          "type": "string",
+          "description": "The organizer name"
+        },
+        "description": {
+          "type": "string",
+          "description": "The organizer long description"
+        },
+        "excerpt": {
+          "type": "string",
+          "description": "The organizer short description"
+        },
+        "image": {
+          "type": "string",
+          "description": "The event featured image details if set",
+          "$ref": "#/definitions/Image"
+        },
+        "phone": {
+          "type": "string",
+          "description": "The organizer phone number"
+        },
+        "website": {
+          "type": "string",
+          "description": "The organizer website"
+        },
+        "email": {
+          "type": "string",
+          "description": "The organizer email address"
+        }
+      }
+    },
+    "Image": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "The URL to the full size version of the image"
+        },
+        "id": {
+          "type": "int",
+          "description": "The image WordPress post ID"
+        },
+        "extension": {
+          "type": "string",
+          "description": "The image file extension"
+        },
+        "width": {
+          "type": "int",
+          "description": "The image natural width in pixels"
+        },
+        "height": {
+          "type": "int",
+          "description": "The image natura height in pixels"
+        },
+        "sizes": {
+          "type": "array",
+          "description": "The details about each size available for the image",
+          "$ref": "#/definitions/ImageSize"
+        }
+      }
+    },
+    "ImageSize": {
+      "type": "object",
+      "properties": {
+        "width": {
+          "type": "int",
+          "description": "The image width in pixels in the specified size"
+        },
+        "height": {
+          "type": "int",
+          "description": "The image height in pixels in the specified size"
+        },
+        "mime-type": {
+          "type": "string",
+          "description": "The image mime-type"
+        },
+        "url": {
+          "type": "string",
+          "description": "The link to the image in the specified size on the site"
+        }
+      }
+    },
+    "DateDetails": {
+      "type": "array",
+      "properties": {
+        "year": {
+          "type": "int",
+          "description": "The date year"
+        },
+        "month": {
+          "type": "int",
+          "description": "The date month"
+        },
+        "day": {
+          "type": "int",
+          "description": "The date day"
+        },
+        "hour": {
+          "type": "int",
+          "description": "The date hour"
+        },
+        "minutes": {
+          "type": "int",
+          "description": "The date minutes"
+        },
+        "seconds": {
+          "type": "int",
+          "description": "The date seconds"
+        }
+      }
+    },
+    "CostDetails": {
+      "type": "array",
+      "properties": {
+        "currency_symbol": {
+          "type": "string",
+          "description": "The cost currency symbol"
+        },
+        "currency_position ": {
+          "type": "string",
+          "description": "The position of the currency symbol in the cost string",
+          "enum": [
+            "prefix",
+            "postfix"
+          ]
+        },
+        "values": {
+          "type": "array",
+          "description": "An sorted array of all the numeric values for the cost"
+        }
+      }
+    },
+    "Term": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "int",
+          "description": "The WordPress term ID"
+        },
+        "name": {
+          "type": "string",
+          "description": "The term name"
+        },
+        "slug": {
+          "type": "string",
+          "description": "The term slug"
+        },
+        "taxonomy": {
+          "type": "string",
+          "description": "The taxonomy the term belongs to"
+        },
+        "description": {
+          "type": "string",
+          "description": "The term description"
+        },
+        "parent": {
+          "type": "int",
+          "description": "The term parent term if any"
+        },
+        "count": {
+          "type": "int",
+          "description": "The number of posts associated with the term"
+        },
+        "link": {
+          "type": "string",
+          "description": "The URL to the term archive page"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,892 @@
+{
+  "events": [
+    {
+      "id": 15709,
+      "global_id": "gohartsville.com?id=15709",
+      "global_id_lineage": [
+        "gohartsville.com?id=15709"
+      ],
+      "author": "2",
+      "date": "2017-04-18 23:53:26",
+      "date_utc": "2017-04-18 21:53:26",
+      "modified": "2017-04-18 23:53:26",
+      "modified_utc": "2017-04-18 21:53:26",
+      "url": "http://gohartsville.com/event/brenda-cranford-school-of-dance-we-got-the-beat-spring-showcase/",
+      "rest_url": "http://gohartsville.com/wp-json/tribe/events/v1/events/15709",
+      "title": "Brenda Cranford School of Dance &#8220;We Got the Beat&#8221; Spring Showcase",
+      "description": "",
+      "excerpt": "",
+      "image": false,
+      "all_day": false,
+      "start_date": "2007-05-12 19:00:00",
+      "start_date_details": {
+        "year": "2007",
+        "month": "05",
+        "day": "12",
+        "hour": "19",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2007-05-12 19:00:00",
+      "end_date_details": {
+        "year": "2007",
+        "month": "05",
+        "day": "12",
+        "hour": "19",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2007-05-12 19:00:00",
+      "utc_start_date_details": {
+        "year": "2007",
+        "month": "05",
+        "day": "12",
+        "hour": "19",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2007-05-12 19:00:00",
+      "utc_end_date_details": {
+        "year": "2007",
+        "month": "05",
+        "day": "12",
+        "hour": "19",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "",
+      "timezone_abbr": "",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": [
+          
+        ]
+      },
+      "website": "",
+      "show_map": true,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        
+      ],
+      "tags": [
+        
+      ],
+      "venue": [
+        
+      ],
+      "organizer": [
+        
+      ]
+    },
+    {
+      "id": 15768,
+      "global_id": "gohartsville.com?id=15768",
+      "global_id_lineage": [
+        "gohartsville.com?id=15768"
+      ],
+      "author": "2",
+      "date": "2017-04-18 23:53:45",
+      "date_utc": "2017-04-18 21:53:45",
+      "modified": "2017-04-19 00:01:49",
+      "modified_utc": "2017-04-18 22:01:49",
+      "url": "http://gohartsville.com/event/hartsville-rotary-district-leadership-assembly-registration/",
+      "rest_url": "http://gohartsville.com/wp-json/tribe/events/v1/events/15768",
+      "title": "Hartsville Rotary District Leadership Assembly Registration",
+      "description": "<p>http://www.rotary7770.org/calendar/</p>",
+      "excerpt": "",
+      "image": false,
+      "all_day": false,
+      "start_date": "2017-03-05 00:00:00",
+      "start_date_details": {
+        "year": "2017",
+        "month": "03",
+        "day": "05",
+        "hour": "00",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2017-04-21 08:00:00",
+      "end_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "21",
+        "hour": "08",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2017-03-04 22:00:00",
+      "utc_start_date_details": {
+        "year": "2017",
+        "month": "03",
+        "day": "04",
+        "hour": "22",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2017-04-21 06:00:00",
+      "utc_end_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "21",
+        "hour": "06",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "UTC+2",
+      "timezone_abbr": "",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": [
+          
+        ]
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        
+      ],
+      "tags": [
+        
+      ],
+      "venue": [
+        
+      ],
+      "organizer": [
+        
+      ]
+    },
+    {
+      "id": 15449,
+      "global_id": "gohartsville.com?id=15449",
+      "global_id_lineage": [
+        "gohartsville.com?id=15449"
+      ],
+      "author": "2",
+      "date": "2017-04-18 23:52:03",
+      "date_utc": "2017-04-18 21:52:03",
+      "modified": "2017-04-18 23:52:03",
+      "modified_utc": "2017-04-18 21:52:03",
+      "url": "http://gohartsville.com/event/gssm-accelerate-physics-lab-weekend-3-and-accelerate-chemistry-lab-weekend-4/",
+      "rest_url": "http://gohartsville.com/wp-json/tribe/events/v1/events/15449",
+      "title": "GSSM Accelerate Physics Lab Weekend 3 and Accelerate Chemistry Lab Weekend 4",
+      "description": "",
+      "excerpt": "",
+      "image": false,
+      "all_day": false,
+      "start_date": "2017-04-01 00:00:00",
+      "start_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "00",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2017-04-01 00:00:00",
+      "end_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "00",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2017-04-01 00:00:00",
+      "utc_start_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "00",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2017-04-01 00:00:00",
+      "utc_end_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "00",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "",
+      "timezone_abbr": "",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": [
+          
+        ]
+      },
+      "website": "",
+      "show_map": true,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "GSSM",
+          "slug": "gssm",
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 83,
+          "id": 58,
+          "url": "http://gohartsville.com/events/category/gssm/"
+        }
+      ],
+      "tags": [
+        
+      ],
+      "venue": [
+        
+      ],
+      "organizer": [
+        
+      ]
+    },
+    {
+      "id": 15388,
+      "global_id": "gohartsville.com?id=15388",
+      "global_id_lineage": [
+        "gohartsville.com?id=15388"
+      ],
+      "author": "2",
+      "date": "2017-04-18 23:51:38",
+      "date_utc": "2017-04-18 21:51:38",
+      "modified": "2017-04-18 23:51:38",
+      "modified_utc": "2017-04-18 21:51:38",
+      "url": "http://gohartsville.com/event/community-easter-eggstravaganza-2/",
+      "rest_url": "http://gohartsville.com/wp-json/tribe/events/v1/events/15388",
+      "title": "Community Easter Eggstravaganza",
+      "description": "",
+      "excerpt": "",
+      "image": false,
+      "all_day": false,
+      "start_date": "2017-04-01 10:00:00",
+      "start_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "10",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2017-04-01 10:00:00",
+      "end_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "10",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2017-04-01 10:00:00",
+      "utc_start_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "10",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2017-04-01 10:00:00",
+      "utc_end_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "10",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "",
+      "timezone_abbr": "",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": [
+          
+        ]
+      },
+      "website": "",
+      "show_map": true,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Coker College",
+          "slug": "coker-college",
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 65,
+          "id": 57,
+          "url": "http://gohartsville.com/events/category/coker-college/"
+        }
+      ],
+      "tags": [
+        
+      ],
+      "venue": [
+        
+      ],
+      "organizer": [
+        
+      ]
+    },
+    {
+      "id": 15528,
+      "global_id": "gohartsville.com?id=15528",
+      "global_id_lineage": [
+        "gohartsville.com?id=15528"
+      ],
+      "author": "2",
+      "date": "2017-04-18 23:52:28",
+      "date_utc": "2017-04-18 21:52:28",
+      "modified": "2017-04-18 23:52:28",
+      "modified_utc": "2017-04-18 21:52:28",
+      "url": "http://gohartsville.com/event/yoga-workshop-2/",
+      "rest_url": "http://gohartsville.com/wp-json/tribe/events/v1/events/15528",
+      "title": "Yoga Workshop",
+      "description": "",
+      "excerpt": "",
+      "image": false,
+      "all_day": false,
+      "start_date": "2017-04-01 10:00:00",
+      "start_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "10",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2017-04-01 11:00:00",
+      "end_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "11",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2017-04-01 10:00:00",
+      "utc_start_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "10",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2017-04-01 11:00:00",
+      "utc_end_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "11",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "",
+      "timezone_abbr": "",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": [
+          
+        ]
+      },
+      "website": "",
+      "show_map": true,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        
+      ],
+      "tags": [
+        
+      ],
+      "venue": [
+        
+      ],
+      "organizer": [
+        
+      ]
+    },
+    {
+      "id": 15529,
+      "global_id": "gohartsville.com?id=15529",
+      "global_id_lineage": [
+        "gohartsville.com?id=15529"
+      ],
+      "author": "2",
+      "date": "2017-04-18 23:52:28",
+      "date_utc": "2017-04-18 21:52:28",
+      "modified": "2017-04-18 23:52:28",
+      "modified_utc": "2017-04-18 21:52:28",
+      "url": "http://gohartsville.com/event/community-easter-eggstravaganza-3/",
+      "rest_url": "http://gohartsville.com/wp-json/tribe/events/v1/events/15529",
+      "title": "Community Easter Eggstravaganza",
+      "description": "",
+      "excerpt": "",
+      "image": false,
+      "all_day": false,
+      "start_date": "2017-04-01 11:00:00",
+      "start_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "11",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2017-04-01 14:00:00",
+      "end_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "14",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2017-04-01 11:00:00",
+      "utc_start_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "11",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2017-04-01 14:00:00",
+      "utc_end_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "14",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "",
+      "timezone_abbr": "",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": [
+          
+        ]
+      },
+      "website": "",
+      "show_map": true,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        
+      ],
+      "tags": [
+        
+      ],
+      "venue": [
+        
+      ],
+      "organizer": [
+        
+      ]
+    },
+    {
+      "id": 15401,
+      "global_id": "gohartsville.com?id=15401",
+      "global_id_lineage": [
+        "gohartsville.com?id=15401"
+      ],
+      "author": "2",
+      "date": "2017-04-18 23:51:46",
+      "date_utc": "2017-04-18 21:51:46",
+      "modified": "2017-04-18 23:51:46",
+      "modified_utc": "2017-04-18 21:51:46",
+      "url": "http://gohartsville.com/event/coker-college-latino-dance-night/",
+      "rest_url": "http://gohartsville.com/wp-json/tribe/events/v1/events/15401",
+      "title": "Coker College Latino Dance Night",
+      "description": "",
+      "excerpt": "",
+      "image": false,
+      "all_day": false,
+      "start_date": "2017-04-01 15:00:00",
+      "start_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "15",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2017-04-01 15:00:00",
+      "end_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "15",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2017-04-01 15:00:00",
+      "utc_start_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "15",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2017-04-01 15:00:00",
+      "utc_end_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "15",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "",
+      "timezone_abbr": "",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": [
+          
+        ]
+      },
+      "website": "",
+      "show_map": true,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Coker College",
+          "slug": "coker-college",
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 65,
+          "id": 57,
+          "url": "http://gohartsville.com/events/category/coker-college/"
+        }
+      ],
+      "tags": [
+        
+      ],
+      "venue": [
+        
+      ],
+      "organizer": [
+        
+      ]
+    },
+    {
+      "id": 15530,
+      "global_id": "gohartsville.com?id=15530",
+      "global_id_lineage": [
+        "gohartsville.com?id=15530"
+      ],
+      "author": "2",
+      "date": "2017-04-18 23:52:28",
+      "date_utc": "2017-04-18 21:52:28",
+      "modified": "2017-04-18 23:52:28",
+      "modified_utc": "2017-04-18 21:52:28",
+      "url": "http://gohartsville.com/event/seussical-jr-3/",
+      "rest_url": "http://gohartsville.com/wp-json/tribe/events/v1/events/15530",
+      "title": "Seussical Jr.",
+      "description": "",
+      "excerpt": "",
+      "image": false,
+      "all_day": false,
+      "start_date": "2017-04-01 19:30:00",
+      "start_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "19",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "end_date": "2017-04-01 22:00:00",
+      "end_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "22",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2017-04-01 19:30:00",
+      "utc_start_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "19",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_end_date": "2017-04-01 22:00:00",
+      "utc_end_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "22",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "",
+      "timezone_abbr": "",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": [
+          
+        ]
+      },
+      "website": "",
+      "show_map": true,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Culture &amp; Arts",
+          "slug": "culture-arts",
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 2,
+          "id": 59,
+          "url": "http://gohartsville.com/events/category/culture-arts/"
+        }
+      ],
+      "tags": [
+        
+      ],
+      "venue": [
+        
+      ],
+      "organizer": [
+        
+      ]
+    },
+    {
+      "id": 15402,
+      "global_id": "gohartsville.com?id=15402",
+      "global_id_lineage": [
+        "gohartsville.com?id=15402"
+      ],
+      "author": "2",
+      "date": "2017-04-18 23:51:46",
+      "date_utc": "2017-04-18 21:51:46",
+      "modified": "2017-04-18 23:51:46",
+      "modified_utc": "2017-04-18 21:51:46",
+      "url": "http://gohartsville.com/event/coker-college-den-night/",
+      "rest_url": "http://gohartsville.com/wp-json/tribe/events/v1/events/15402",
+      "title": "Coker College Den Night",
+      "description": "",
+      "excerpt": "",
+      "image": false,
+      "all_day": false,
+      "start_date": "2017-04-01 22:00:00",
+      "start_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "22",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2017-04-01 22:00:00",
+      "end_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "22",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2017-04-01 22:00:00",
+      "utc_start_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "22",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2017-04-01 22:00:00",
+      "utc_end_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "01",
+        "hour": "22",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "",
+      "timezone_abbr": "",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": [
+          
+        ]
+      },
+      "website": "",
+      "show_map": true,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Coker College",
+          "slug": "coker-college",
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 65,
+          "id": 57,
+          "url": "http://gohartsville.com/events/category/coker-college/"
+        }
+      ],
+      "tags": [
+        
+      ],
+      "venue": [
+        
+      ],
+      "organizer": [
+        
+      ]
+    },
+    {
+      "id": 15531,
+      "global_id": "gohartsville.com?id=15531",
+      "global_id_lineage": [
+        "gohartsville.com?id=15531"
+      ],
+      "author": "2",
+      "date": "2017-04-18 23:52:28",
+      "date_utc": "2017-04-18 21:52:28",
+      "modified": "2017-04-18 23:52:28",
+      "modified_utc": "2017-04-18 21:52:28",
+      "url": "http://gohartsville.com/event/seussical-jr-4/",
+      "rest_url": "http://gohartsville.com/wp-json/tribe/events/v1/events/15531",
+      "title": "Seussical Jr.",
+      "description": "",
+      "excerpt": "",
+      "image": false,
+      "all_day": false,
+      "start_date": "2017-04-02 15:00:00",
+      "start_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "02",
+        "hour": "15",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2017-04-02 17:30:00",
+      "end_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "02",
+        "hour": "17",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_start_date": "2017-04-02 15:00:00",
+      "utc_start_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "02",
+        "hour": "15",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2017-04-02 17:30:00",
+      "utc_end_date_details": {
+        "year": "2017",
+        "month": "04",
+        "day": "02",
+        "hour": "17",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "timezone": "",
+      "timezone_abbr": "",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": [
+          
+        ]
+      },
+      "website": "",
+      "show_map": true,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Culture &amp; Arts",
+          "slug": "culture-arts",
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 2,
+          "id": 59,
+          "url": "http://gohartsville.com/events/category/culture-arts/"
+        }
+      ],
+      "tags": [
+        
+      ],
+      "venue": [
+        
+      ],
+      "organizer": [
+        
+      ]
+    }
+  ],
+  "rest_url": "http://gohartsville.com/wp-json/tribe/events/v1/events/",
+  "next_rest_url": "http://gohartsville.com/wp-json/tribe/events/v1/events/?page=2",
+  "total": 478,
+  "total_pages": 48
+}
