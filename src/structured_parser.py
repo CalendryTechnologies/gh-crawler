@@ -19,6 +19,8 @@ import custom_filters
 from general import PROJECT_ROOT
 
 
+DEBUG = True
+
 def extract_from_template(json_filename, debug=False):
     '''
     Reads json template file then extracts data according to its rules and writes it where specified
@@ -113,6 +115,7 @@ def extract_process(rules_dict, output_file, variables={}, debug=False):
             temp_url = url.replace("{$%s}" % var[0], str(var[1])) #replace any instance of variables in url
 
             single_result = extract_node_from_url(temp_url, rules_dict, debug=debug) #TODO we can't use threading for this because the return must be used to determine if it changed anything
+            if DEBUG: print("extracted from %s" % temp_url)
 
         #nothing was found at the specified url
         if len(single_result) <= 0:

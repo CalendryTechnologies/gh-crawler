@@ -5,11 +5,11 @@ Diffs new findings and uploaded files (via wp REST API) then outputs json file w
 '''
 
 import json
-from datetime import datetime
 from os.path import join as pathjoin
 import requests
 
 from general import PROJECT_ROOT
+from event_cmp import EventList, printEL
 
 
 DEBUG = True
@@ -28,10 +28,10 @@ def dump_json_asset(asset_type, name, obj):
         json.dump(obj, fp, indent=2)
     
 def get_events(name):
-    return EventDict(get_json_asset("events", name)["events"])
+    return EventList(get_json_asset("events", name)["events"])
 
 def get_newevents(name):
-    return EventDict(get_json_asset("newevents", name)["events"])
+    return EventList(get_json_asset("newevents", name)["events"])
 
 def load_json(filename):
     with open(filename, "r") as fp:
@@ -68,46 +68,15 @@ def pull_events(save_to=None):
     
     return events
 
-class EventDict(list):
-    def by_datetime(self, start, stop=None):
-        if stop is None:
-            def same_date(event):
-                start_str = event.get("start_date")
-                if not start_str:
-                    return False
-                else:
-                    return datetime.strptime(start_str, "%Y-%m-%d %H:%M:%S") == start
-                
-            return EventDict(filter(same_date, self))
-        
-        else:
-            def in_range(event):
-                start_str = event.get("start_date")
-                if not start_str:
-                    return False
-                else:
-                    start_datetime = datetime.strptime(start_str, "%Y-%m-%d %H:%M:%S")
-                    return start <= start_datetime <= stop
-            
-            return EventDict(filter(in_range, self))
-
-def printE(events):
-    ret = "[\n"
-    for ev in events:
-        ret += "  %s (%s to %s)\n" % (
-            ev.get("title"), 
-            ev.get("start_date") or ev.get("start"),
-            ev.get("end_date") or ev.get("stop")
-        )
-    ret += "]"
-    print(ret)
+def main():
+    #printEL(pull_events())
+    events = get_events("test")
+    printEL(events)
+    new_events = get_newevents("test")
+    printEL(new_events)
+    start = "2017-03-29 19:00:00"
+    stop = "2017-04-15 19:00:00"
+    printEL(events.by_datetime(start, stop, form="text").by_matching(events[2]))
 
 if __name__ == "__main__":
-    #printE(pull_events())
-    events = get_events("test")
-    printE(events)
-    new_events = get_newevents("test")
-    printE(new_events)
-    start = datetime.strptime("2007-04-12 19:00:00", "%Y-%m-%d %H:%M:%S")
-    stop = datetime.strptime("2007-05-13 19:00:00", "%Y-%m-%d %H:%M:%S")
-    printE(events.by_datetime(start, stop))
+    main()
