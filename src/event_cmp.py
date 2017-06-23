@@ -3,14 +3,38 @@ Compares and merges events for use in combining uploads
 '''
 
 from datetime import datetime
+from html import unescape
+from difflib import SequenceMatcher
 
 
 MATCHING_FIELDS = {"title", "description", "start_date", "end_date"} #TODO real values
 
-def ev_cmp(ev1, ev2):
-    pass #TODO lots of implementation here)
+def str_cmp(str1, str2):
+    return SequenceMatcher(None, str1, str2).ratio() #TODO possibly quick_ratio or real_quick_ratio
 
+def ev_cmp(ev1, ev2, match_fields=MATCHING_FIELDS):
+    diffs = []
+    for k in match_fields:
+        value1 = ev1.get(k)
+        value2 = ev2.get(k)
+        if value1 and value2:
+            diffs.append(str_cmp(value1, value2))
+            #TODO add some sort of special value diff because different dates appear similar as strings
+        elif not value1 and not value2:
+            #includes empty string to None comparison
+            pass
+        else:
+            diffs.append(0) #possibly update for empty strings
+    return sum(diffs) / len(diffs)
+    
 class EventList(list):
+    def __init__(self, lst):
+        super().__init__(lst)
+        for event in lst:
+            for k in event.keys():
+                if isinstance(event[k], str):
+                    event[k] = unescape(event[k])
+      
     def by_datetime(self, start, stop=None, form="text"):
         if form == "datetime":
             pass
@@ -41,15 +65,23 @@ class EventList(list):
             
             return EventList(filter(in_range, self))
     
-    def by_matching(self, compare_event, match_fields=MATCHING_FIELDS):
-        def matches(event):
-            for attribute in match_fields:
-                if event.get(attribute) != compare_event.get(attribute):
-                    return False
-            return True
+    def by_matching(self, compare_event, match_fields=MATCHING_FIELDS, threshold=1):
+        if threshold == 1:
+            #Only absolute matches
+            def matches(event):
+                for attribute in match_fields:
+                    if event.get(attribute) != compare_event.get(attribute):
+                        return False
+                return True
+            
+            return EventList(filter(matches, self))
+        else:
+            #Fuzzy comparison matches based on percent difference
+            def matches(event):
+                return ev_cmp(event, compare_event, match_fields) > threshold
+            
+            return EventList(filter(matches, self))
         
-        return EventList(filter(matches, self))
-    
     def to_dict(self):
         return {"events" : self}
 

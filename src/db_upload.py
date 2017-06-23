@@ -76,7 +76,7 @@ def main():
     printEL(new_events)
     start = "2017-03-29 19:00:00"
     stop = "2017-04-15 19:00:00"
-    printEL(events.by_datetime(start, stop, form="text").by_matching(events[2]))
+    printEL(events.by_datetime(start, stop, form="text").by_matching(events[2], threshold=0.9))
 
 if __name__ == "__main__":
     main()
