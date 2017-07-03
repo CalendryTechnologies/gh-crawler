@@ -12,3 +12,7 @@ def project_root():
     return normpath(pathjoin(dirname(abspath(sys.argv[0])), "..")) #gets root of project (moving out of src)
 
 PROJECT_ROOT = project_root()
+
+DEBUG = True
+
+ASSETS_DIR = pathjoin(PROJECT_ROOT, "mock") #should be changed for release

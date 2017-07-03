@@ -8,12 +8,11 @@ import json
 from os.path import join as pathjoin
 import requests
 
-from general import PROJECT_ROOT
+from general import DEBUG, ASSETS_DIR
 from event_cmp import EventList, printEL
+from json2csv import json2csv
 
 
-DEBUG = True
-ASSETS_DIR = pathjoin(PROJECT_ROOT, "mock")
 GH_API_URL = "http://gohartsville.com/wp-json/tribe/events/v1/events?per_page=50&page={page}"
 EMPTY_CODE = "event-archive-page-not-found"
 
@@ -77,6 +76,11 @@ def main():
     start = "2017-03-29 19:00:00"
     stop = "2017-04-15 19:00:00"
     printEL(events.by_datetime(start, stop, form="text").by_matching(events[2], threshold=0.9))
+    
+    with open(pathjoin(ASSETS_DIR, "tests", "test.csv"), "w+") as fp:
+        import csv
+        writer = csv.writer(fp)
+        writer.writerows(json2csv(new_events, csv_headers=None))
 
 if __name__ == "__main__":
     main()
