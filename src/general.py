@@ -1,5 +1,6 @@
 
 import sys
+from datetime import datetime
 from os.path import join as pathjoin, abspath, dirname, normpath
 
 
@@ -10,6 +11,9 @@ def project_root():
     :return: Returns absolute path string for project root directory
     '''
     return normpath(pathjoin(dirname(abspath(sys.argv[0])), "..")) #gets root of project (moving out of src)
+
+def nowstr():
+    return datetime.utcnow().strftime("%Y%m%d%H%M%S")
 
 PROJECT_ROOT = project_root()
 

@@ -1,0 +1,8 @@
+{
+  "TODO" : "Put together a complete, standardized format example",
+
+  "@follow" : {
+    "@xpath" : ".//a[contains(@class,'tribe-event-url')]/@href"
+
+  }
+}

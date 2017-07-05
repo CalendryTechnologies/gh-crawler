@@ -16,7 +16,7 @@ import os
 from os.path import join as pathjoin
 
 import custom_filters
-from general import PROJECT_ROOT
+from general import ASSETS_DIR, nowstr
 
 
 DEBUG = True
@@ -25,7 +25,7 @@ def extract_from_template(json_filename, debug=False):
     '''
     Reads json template file then extracts data according to its rules and writes it where specified
     '''
-    template = get_template(pathjoin(PROJECT_ROOT, "templates", json_filename)) #filename in templates directory
+    template = get_template(pathjoin(ASSETS_DIR, "templates", json_filename)) #filename in templates directory
     extract(template, debug=debug)
 
 def get_template(json_filename):
@@ -56,10 +56,13 @@ def extract(rules_dict, debug=False):
     Extracts an entire set of data based on a rules dictionary
     '''
     annotations, processes = partition_rules(rules_dict)
-
-    output_dir = pathjoin(PROJECT_ROOT, "results", (annotations.get("@output_dir") or ".")) #get output_dir or use blank relative path #TODO possibly need to use . for relative location
+    
+    now = nowstr()
+    output_dir = pathjoin(ASSETS_DIR, "newevents", now, (annotations.get("@output_dir") or ".")) #get output_dir or use blank relative path #TODO possibly need to use . for relative location
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
+
+    threads = []
 
     for process_key in processes:
         #loop through each process and complete it
@@ -69,8 +72,12 @@ def extract(rules_dict, debug=False):
 
         thread = threading.Thread(target=extract_process, args=(process_rules, process_output, {}, debug))
         thread.start()
+        threads.append(thread) #add threads to list so they can be joined to main thread
 
         #extract_process(process_rules, process_output, debug=debug) #extract from the individual process
+
+    for thread in threads:
+        thread.join()
 
 def get_variables(annotations):
     '''

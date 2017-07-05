@@ -6,17 +6,22 @@ from datetime import datetime
 from html import unescape
 from difflib import SequenceMatcher
 
+from general import DEBUG
+
 
 MATCHING_FIELDS = {"title", "description", "start_date", "end_date"} #items to use in comparison #TODO real values
 FIELD_WEIGHTS = {"start_date" : 2, "end_date" : 2} #default weights #TODO real values
 
 def str_cmp(str1, str2):
-    return SequenceMatcher(None, str1, str2).ratio() #TODO possibly quick_ratio or real_quick_ratio
+    return SequenceMatcher(None, str(str1), str(str2)).ratio() #TODO possibly quick_ratio or real_quick_ratio
 
 def ev_cmp(ev1, ev2, match_fields=MATCHING_FIELDS, field_weights={}):
+    #TODO add option for default and other comparison functions (i.e. default_cmp=str_cmp, custom_cmps={'start_date':date_cmp})
+    #NOTE: if match_fields=None, all fields are used
     diffs = []
     weighted_total = 0
-    for k in match_fields:
+    
+    for k in (match_fields or set(ev1.keys()).intersection(ev2.keys())):
         value1 = ev1.get(k)
         value2 = ev2.get(k)
         if value1 and value2:
@@ -30,7 +35,7 @@ def ev_cmp(ev1, ev2, match_fields=MATCHING_FIELDS, field_weights={}):
             pass
         else:
             diffs.append(0) #possibly update for empty strings
-            diffs += 1
+            weighted_total += 1
     return sum(diffs) / weighted_total if weighted_total > 0 else 0 #default to zero if events have no usable fields
     
 class EventList(list):
@@ -87,6 +92,32 @@ class EventList(list):
                 return ev_cmp(event, compare_event, match_fields) > threshold
             
             return EventList(filter(matches, self))
+        
+    def union(self, otherEL, **kwargs):
+        '''
+        Union of two event lists 
+        
+        :param otherEL: another EventList to add to current EventList
+        :param **kwargs: keyword arguments to be passed to by_matching function
+        '''
+        newEL = EventList(self) #create copy of self
+        for item in otherEL:
+            if len(self.by_matching(item, **kwargs)) == 0:
+                #There are none like the item so add it to the list
+                newEL += [item]
+        return newEL
+    
+    def intersection(self, otherEL, **kwargs):
+        '''
+        Intersection of two event lists (self minus all elements of otherEL)
+        
+        #TODO parameters same as union
+        '''
+        newEL = EventList(self) #create copy of self
+        for item in otherEL:
+            for match in self.by_matching(item, **kwargs):
+                newEL.remove(match)
+        return newEL
         
     def to_dict(self):
         return {"events" : self}

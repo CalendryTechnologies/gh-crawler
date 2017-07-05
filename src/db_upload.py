@@ -36,13 +36,14 @@ def load_json(filename):
     with open(filename, "r") as fp:
         return json.load(fp)
 
-def pull_events(save_to=None):
+def pull_events(gh_url=GH_API_URL, save_to=None):
     '''
     Pulls events from the GoHartsville site
+    :param gh_url: url to pull json GoHartsville current events (with "{page}" where number will be included)
     :param save_to: if not None, json file is saved to this location in events directory
     '''
     i = 1
-    url = GH_API_URL.replace("{page}", str(i))
+    url = gh_url.replace("{page}", str(i))
     page = requests.get(url).json()
     #if DEBUG: print("> pull_events: pulled %s" % url)
     events = page.get("events")
@@ -50,7 +51,7 @@ def pull_events(save_to=None):
     
     while not done:
         i += 1
-        url = GH_API_URL.replace("{page}", str(i))
+        url = gh_url.replace("{page}", str(i))
         page = requests.get(url).json()
 
         #if DEBUG: print("> pull_events: pulled %s" % url)
@@ -68,19 +69,25 @@ def pull_events(save_to=None):
     return events
 
 def main():
+    '''
+    Module test acts in mock 
+    '''
     #printEL(pull_events())
     events = get_events("test")
     printEL(events)
-    new_events = get_newevents("test")
-    printEL(new_events)
+    #new_events = get_newevents("test")
+    #printEL(new_events)
     start = "2017-03-29 19:00:00"
     stop = "2017-04-15 19:00:00"
-    printEL(events.by_datetime(start, stop, form="text").by_matching(events[2], threshold=0.9))
+    printEL(events.by_datetime(start, stop, form="text").by_matching(events[2], threshold=0.99))
     
-    with open(pathjoin(ASSETS_DIR, "tests", "test.csv"), "w+") as fp:
-        import csv
-        writer = csv.writer(fp)
-        writer.writerows(json2csv(new_events, csv_headers=None))
+#     oldEL = EventList(events[:4])
+#     printEL(oldEL.intersection(EventList(events[2:])))
+    
+#     with open(pathjoin(ASSETS_DIR, "tests", "test.csv"), "w+") as fp:
+#         import csv
+#         writer = csv.writer(fp)
+#         writer.writerows(json2csv(events, csv_headers=None))
 
 if __name__ == "__main__":
     main()
