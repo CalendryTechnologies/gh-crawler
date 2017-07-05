@@ -16,7 +16,7 @@ import os
 from os.path import join as pathjoin
 
 import custom_filters
-from general import ASSETS_DIR, nowstr
+from general import ASSETS_DIR, nowstr, mkdir
 
 
 DEBUG = True
@@ -59,8 +59,7 @@ def extract(rules_dict, debug=False):
     
     now = nowstr()
     output_dir = pathjoin(ASSETS_DIR, "newevents", now, (annotations.get("@output_dir") or ".")) #get output_dir or use blank relative path #TODO possibly need to use . for relative location
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
+    mkdir(output_dir)
 
     threads = []
 

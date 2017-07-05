@@ -51,7 +51,7 @@ def json2csv(json_input, csv_headers=EMPTY_CSV_HEADER, remapping=EMPTY_CSV_REMAP
         csv_headers = set()
         for item in json_input:
             csv_headers.update(item.keys())
-        csv_headers = list(csv_headers)
+        csv_headers = sorted(list(csv_headers))
         
     csv_out = [csv_headers]
     

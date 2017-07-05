@@ -11,7 +11,7 @@ from structured_parser import extract_from_template
 from db_upload import get_newevents, pull_events
 from event_cmp import EventList, printEL
 from json2csv import json2csv
-from general import ASSETS_DIR, DEBUG, nowstr
+from general import ASSETS_DIR, DEBUG, nowstr, move_dir, mkdir
 
 
 TEMPLATE = "hartsvillesc.json" # template filename in ASSETS_DIR/templates directory
@@ -45,16 +45,21 @@ def full_update():
     csv_upload_events = json2csv(upload_events, csv_headers=None, remapping={})
     
     ## Clean up results directory
-    #TODO TODO TODO cleaning up phase for results directory
-    
+    results_dir = pathjoin(ASSETS_DIR, "results")
+    results_cache = pathjoin(ASSETS_DIR, "cache", "results")
+    mkdir(results_cache)
+    move_dir(results_dir, results_cache)
+        
     ## Write csv to results
-    results_path = pathjoin(ASSETS_DIR, "results", nowstr() + ".csv")
+    results_path = pathjoin(results_dir, nowstr() + ".csv")
     with open(results_path, "w+") as fp:
         writer = csv.writer(fp)
         writer.writerows(csv_upload_events)
     
     ## Clean up newevents directory
-    #TODO TODO TODO cleaning up phase for newevents directory
+    newevents_cache = pathjoin(ASSETS_DIR, "cache", "newevents")
+    mkdir(newevents_cache)
+    move_dir(newevents_dir, newevents_cache)
 
 def main():
     full_update()

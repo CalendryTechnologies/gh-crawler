@@ -1,7 +1,9 @@
 
 import sys
 from datetime import datetime
-from os.path import join as pathjoin, abspath, dirname, normpath
+from os.path import join as pathjoin, abspath, dirname, normpath, exists as pathexists
+from os import listdir, makedirs
+import shutil
 
 
 def project_root():
@@ -14,6 +16,16 @@ def project_root():
 
 def nowstr():
     return datetime.utcnow().strftime("%Y%m%d%H%M%S")
+
+def move_dir(from_dir, to_dir):
+    for file in listdir(from_dir):
+        from_file = pathjoin(from_dir, file)
+        to_file = pathjoin(to_dir, file)
+        shutil.move(from_file, to_file)
+
+def mkdir(directory):
+    if not pathexists(directory):
+        makedirs(directory)
 
 PROJECT_ROOT = project_root()
 

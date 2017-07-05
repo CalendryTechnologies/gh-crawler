@@ -4,3 +4,5 @@ venv
 .pydevproject
 **/__pycache__
 **/*.sqlite
+**/cache/*
+**/mock/results/*
